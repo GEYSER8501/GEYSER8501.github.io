@@ -1,95 +1,263 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bon Plan Achat - Las mejores ofertas Amazon Francia 17/11/2025</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:,">
-    <meta name="description" content="Las mejores ofertas y descuentos en Amazon Francia, actualizadas diariamente. AirPods, iPhone, PS5 y más a precios rebajados.">
-    <meta name="keywords" content="Amazon Francia, ofertas, descuentos, chollos, AirPods, PS5, iPhone, Galaxy, Nintendo">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page Premium | Productos Destacados</title>
+<meta name="description" content="Landing page ultra-profesional con parallax 3D, levitación de cards y partículas interactivas.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Reset básico */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',Arial,sans-serif;background:linear-gradient(#111,#222);color:#fff;line-height:1.6;overflow-x:hidden;perspective:1500px;perspective-origin:center top}
 
-    <!-- JSON-LD para productos -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {"@type":"Product","name":"Apple AirPods Pro 2ª gen","image":"https://m.media-amazon.com/images/I/71VRC7vQJQL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0CHX1L4JJ?tag=TUID-21","price":"189","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"Dyson V15 Detect Absolute","image":"https://m.media-amazon.com/images/I/61n4K0i9fGL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B08Z9ZML9T?tag=TUID-21","price":"499","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"iPhone 16 128 GB","image":"https://m.media-amazon.com/images/I/61bQ2R5K1HL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0DGY4C8B8?tag=TUID-21","price":"829","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"Samsung Galaxy S24 Ultra 512 GB","image":"https://m.media-amazon.com/images/I/81Z7k0J4YCL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0CN8F9W3R?tag=TUID-21","price":"999","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"PlayStation 5 Slim + 2 mandos","image":"https://m.media-amazon.com/images/I/61q9j9iV8WL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0D2H8H5S3?tag=TUID-21","price":"499","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"Nintendo Switch OLED + Mario Kart 8","image":"https://m.media-amazon.com/images/I/51P1X8dQJZL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0BFC6SZ4Y?tag=TUID-21","price":"319","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"Roborock S8 Pro Ultra","image":"https://m.media-amazon.com/images/I/61m1a4o3YOL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0BWHJP4QJ?tag=TUID-21","price":"749","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"Nespresso De'Longhi + 50 cápsulas","image":"https://m.media-amazon.com/images/I/71gO5c0K1ZL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0B5Z3J7Z3?tag=TUID-21","price":"99","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"Sony WH-1000XM5","image":"https://m.media-amazon.com/images/I/61X7q3R4JZL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B09XS7SYH6?tag=TUID-21","price":"279","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}},
-        {"@type":"Product","name":"LG OLED 55\" C4 2024","image":"https://m.media-amazon.com/images/I/71K0h0K1LQL._AC_SL1500_.jpg","offers":{"@type":"Offer","url":"https://www.amazon.fr/dp/B0CVQ9B9B9?tag=TUID-21","price":"999","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-17"}}
-      ]
-    }
-    </script>
+/* Header */
+header{
+  position:relative;
+  overflow:hidden;
+  padding:90px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#ff6b00,#e65100);
+}
+header h1, header p{
+  position:relative;
+  z-index:2;
+  opacity:0;
+  transform:translateY(-20px);
+  animation:fadeInUp 1s forwards;
+}
+header h1{animation-delay:.2s;font-size:3.6rem;letter-spacing:2px;text-shadow:2px 2px 12px rgba(0,0,0,.6)}
+header p{animation-delay:.4s;font-size:1.5rem;letter-spacing:1px;font-weight:500}
+
+/* Canvas partículas */
+#particlesCanvas{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1}
+
+/* Container y grid */
+.container{max-width:1200px;margin:0 auto;padding:30px 20px;position:relative;z-index:2}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px;grid-auto-rows:minmax(420px,auto)}
+
+/* Cards */
+.card{
+  background:linear-gradient(145deg,#fff,#f3f3f3);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  transform-style:preserve-3d;
+  transition:transform .5s ease,box-shadow .5s ease;
+  opacity:0;
+  cursor:pointer;
+}
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:transform .5s ease, filter .3s;
+}
+.card img:hover{transform:scale(1.12) translateY(-8px); filter:brightness(1.05);}
+.card h3, .precio, .btn{
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeInUp .6s forwards;
+}
+.card h3{animation-delay:.3s}
+.precio{animation-delay:.5s;padding:12px;font-size:1.5rem;color:#e65100}
+.precio del{color:#999;font-size:1rem}
+.btn{animation-delay:.7s;display:inline-block;background:linear-gradient(90deg,#ff6b00,#e65100);color:#fff;padding:16px 28px;text-decoration:none;font-weight:600;margin:15px auto;border-radius:14px;transition:transform .3s,box-shadow .3s,background .5s}
+.btn:hover{background:linear-gradient(90deg,#e65100,#ff6b00);transform:scale(1.05);box-shadow:0 12px 30px rgba(255,107,0,.6)}
+.card:hover{box-shadow:0 20px 40px rgba(255,107,0,.3)}
+
+/* Footer */
+footer{text-align:center;padding:45px 20px;background:#000;font-size:.9rem;letter-spacing:.5px;position:relative;z-index:2}
+
+/* Animaciones */
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0)}}
+@keyframes levitate{0%{transform:translateY(0)}50%{transform:translateY(var(--levitate-amplitude,8px))}100%{transform:translateY(0)}}
+
+/* Responsive */
+@media(max-width:992px){
+  header h1{font-size:2.8rem}
+  header p{font-size:1.3rem}
+  .grid{gap:20px}
+}
+@media(max-width:768px){
+  header{padding:50px 15px}
+  header h1{font-size:2.4rem}
+  header p{font-size:1.1rem}
+  .card img{height:180px}
+  .btn{padding:14px 22px}
+}
+@media(max-width:480px){
+  header{padding:40px 10px}
+  header h1{font-size:2rem}
+  header p{font-size:1rem}
+  .grid{grid-template-columns:1fr;gap:15px}
+  .card img{height:160px}
+  .btn{padding:12px 20px;font-size:.95rem}
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🔥 BON PLAN ACHAT</h1>
-            <p>Las mejores ofertas y chollos de Amazon Francia - Actualizado 17 Noviembre 2025</p>
-        </div>
-    </header>
 
-    <main class="container">
-        <section class="grid">
-            <!-- Oferta 1 -->
-            <article class="card" itemscope itemtype="https://schema.org/Product">
-                <img src="https://m.media-amazon.com/images/I/71VRC7vQJQL._AC_SL1500_.jpg" alt="Apple AirPods Pro 2ª gen" loading="lazy" itemprop="image">
-                <h3 itemprop="name">Apple AirPods Pro 2ª gen</h3>
-                <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                    -24% <strong itemprop="price">189</strong> €
-                    <del>249 €</del>
-                    <meta itemprop="priceCurrency" content="EUR">
-                    <meta itemprop="availability" content="https://schema.org/InStock">
-                    <meta itemprop="priceValidUntil" content="2025-11-17">
-                    <link itemprop="url" href="https://www.amazon.fr/dp/B0CHX1L4JJ?tag=TUID-21">
-                </p>
-                <a href="https://www.amazon.fr/dp/B0CHX1L4JJ?tag=TUID-21" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Ver oferta de Apple AirPods Pro 2ª gen en Amazon Francia">Ver oferta ➤</a>
-            </article>
+<header>
+  <canvas id="particlesCanvas"></canvas>
+  <h1>Productos Destacados Premium</h1>
+  <p>Landing page interactiva con partículas que siguen el cursor</p>
+</header>
 
-            <!-- Oferta 2 -->
-            <article class="card" itemscope itemtype="https://schema.org/Product">
-                <img src="https://m.media-amazon.com/images/I/61n4K0i9fGL._AC_SL1500_.jpg" alt="Dyson V15 Detect Absolute" loading="lazy" itemprop="image">
-                <h3 itemprop="name">Dyson V15 Detect Absolute</h3>
-                <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                    -29% <strong itemprop="price">499</strong> €
-                    <del>699 €</del>
-                    <meta itemprop="priceCurrency" content="EUR">
-                    <meta itemprop="availability" content="https://schema.org/InStock">
-                    <meta itemprop="priceValidUntil" content="2025-11-17">
-                    <link itemprop="url" href="https://www.amazon.fr/dp/B08Z9ZML9T?tag=TUID-21">
-                </p>
-                <a href="https://www.amazon.fr/dp/B08Z9ZML9T?tag=TUID-21" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Ver oferta de Dyson V15 Detect Absolute en Amazon Francia">Ver oferta ➤</a>
-            </article>
+<div class="container">
+  <div class="grid">
+    <div class="card">
+      <img loading="lazy" src="https://via.placeholder.com/400x220.webp" alt="Producto 1 destacado">
+      <h3>Producto 1</h3>
+      <p class="precio"><del>$50</del> $30</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+    <div class="card">
+      <img loading="lazy" src="https://via.placeholder.com/400x220.webp" alt="Producto 2 destacado">
+      <h3>Producto 2</h3>
+      <p class="precio"><del>$60</del> $35</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+    <div class="card">
+      <img loading="lazy" src="https://via.placeholder.com/400x220.webp" alt="Producto 3 destacado">
+      <h3>Producto 3</h3>
+      <p class="precio"><del>$70</del> $40</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+    <div class="card">
+      <img loading="lazy" src="https://via.placeholder.com/400x220.webp" alt="Producto 4 destacado">
+      <h3>Producto 4</h3>
+      <p class="precio"><del>$80</del> $50</p>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+  </div>
+</div>
 
-            <!-- Oferta 3 -->
-            <article class="card" itemscope itemtype="https://schema.org/Product">
-                <img src="https://m.media-amazon.com/images/I/61bQ2R5K1HL._AC_SL1500_.jpg" alt="iPhone 16 128 GB" loading="lazy" itemprop="image">
-                <h3 itemprop="name">iPhone 16 128 GB</h3>
-                <p class="precio" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                    -13% <strong itemprop="price">829</strong> €
-                    <del>959 €</del>
-                    <meta itemprop="priceCurrency" content="EUR">
-                    <meta itemprop="availability" content="https://schema.org/InStock">
-                    <meta itemprop="priceValidUntil" content="2025-11-17">
-                    <link itemprop="url" href="https://www.amazon.fr/dp/B0DGY4C8B8?tag=TUID-21">
-                </p>
-                <a href="https://www.amazon.fr/dp/B0DGY4C8B8?tag=TUID-21" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Ver oferta de iPhone 16 128 GB en Amazon Francia">Ver oferta ➤</a>
-            </article>
+<footer>&copy; 2025 Mi Landing Page. Todos los derechos reservados.</footer>
 
-            <!-- Oferta 4 hasta Oferta 10 siguen el mismo patrón de microdatos -->
-            <!-- Para no repetir demasiado, mantén el mismo código que ya hemos hecho arriba para las demás tarjetas -->
-        </section>
-    </main>
+<script>
+// --- Partículas y levitación 3D ---
+const canvas = document.getElementById("particlesCanvas");
+const ctx = canvas.getContext("2d");
+const headerEl = document.querySelector("header");
+const cards = document.querySelectorAll(".card");
 
-    <footer>
-        <p>© 2025 Bon Plan Achat – Ofertas actualizadas diariamente | Envío GRATIS con Prime</p>
-    </footer>
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = headerEl.offsetHeight;
+
+const mouse = { x: width/2, y: height/2 };
+let particleCount = window.innerWidth <= 768 ? 30 : 100;
+const particles = [];
+
+for(let i=0;i<particleCount;i++){
+  particles.push({
+    x: Math.random()*width,
+    y: Math.random()*height,
+    r: Math.random()*2+1,
+    dx: (Math.random()-0.5)*0.5,
+    dy: (Math.random()-0.5)*0.5
+  });
+}
+
+function animateParticles(){
+  ctx.clearRect(0,0,width,height);
+  particles.forEach(p=>{
+    const dx = mouse.x-p.x, dy=mouse.y-p.y;
+    p.x+=dx*0.001+p.dx; p.y+=dy*0.001+p.dy;
+    if(p.x<0||p.x>width)p.dx*=-1;
+    if(p.y<0||p.y>height)p.dy*=-1;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,2*Math.PI);
+    ctx.fillStyle="rgba(255,255,255,0.3)";
+    ctx.shadowColor="rgba(255,255,255,0.2)";
+    ctx.shadowBlur=4;
+    ctx.fill();
+  });
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+window.addEventListener("resize",()=>{
+  width=canvas.width=window.innerWidth;
+  height=canvas.height=headerEl.offsetHeight;
+  particleCount = window.innerWidth <= 768 ? 30 : 100;
+});
+
+// Levitación y rotación aleatoria
+function add3DEffect(card){
+  const amplitude=Math.random()*8+4;
+  const duration=Math.random()*3+2;
+  const delay=Math.random()*2;
+  card.style.setProperty("--levitate-amplitude",`${amplitude}px`);
+  card.style.animation=`levitate ${duration}s ease-in-out ${delay}s infinite alternate`;
+  card.dataset.rotationX=(Math.random()-0.5)*5;
+  card.dataset.rotationY=(Math.random()-0.5)*5;
+  card.style.transform=`rotateX(${card.dataset.rotationX}deg) rotateY(${card.dataset.rotationY}deg)`;
+}
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const card=entry.target;
+      card.style.opacity=1;
+      add3DEffect(card);
+      observer.unobserve(card);
+    }
+  });
+},{threshold:0.2});
+
+cards.forEach(card=>observer.observe(card));
+
+window.addEventListener("mousemove",e=>{
+  const isMobile=window.innerWidth<=768;
+  mouse.x=e.clientX;
+  mouse.y=e.clientY;
+  if(!isMobile){
+    const x=(e.clientX/window.innerWidth-0.5)*20;
+    const y=(e.clientY/window.innerHeight-0.5)*20;
+    headerEl.style.transform=`translate3d(${x/2}px,${y/2}px,0)`;
+    cards.forEach((card,index)=>{
+      const factor=1+index*0.05;
+      const rotateY=parseFloat(card.dataset.rotationY)+x*factor;
+      const rotateX=parseFloat(card.dataset.rotationX)-y*factor;
+      card.style.transform=`rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      const rect=card.getBoundingClientRect();
+      const dx=e.clientX-(rect.left+rect.width/2);
+      const dy=e.clientY-(rect.top+rect.height/2);
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      const intensity=Math.max(0,1-dist/300);
+      card.style.boxShadow=`0 20px 40px rgba(255,107,0,${0.3+0.3*intensity})`;
+    });
+  } else {
+    headerEl.style.transform="translate3d(0,0,0)";
+    cards.forEach(card=>{
+      card.style.transform=`rotateX(${card.dataset.rotationX}deg) rotateY(${card.dataset.rotationY}deg)`;
+      card.style.boxShadow="0 10px 30px rgba(0,0,0,0.25)";
+    });
+  }
+});
+
+window.addEventListener("mouseleave",()=>{
+  headerEl.style.transform="translate3d(0,0,0)";
+  cards.forEach(card=>{
+    card.style.transform=`rotateX(${card.dataset.rotationX}deg) rotateY(${card.dataset.rotationY}deg)`;
+    card.style.boxShadow="0 10px 30px rgba(0,0,0,0.25)";
+  });
+});
+
+// Keyframes dinámico
+const styleEl=document.createElement('style');
+styleEl.innerHTML=`
+@keyframes levitate{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(var(--levitate-amplitude,8px));}
+  100%{transform:translateY(0);}
+}`;
+document.head.appendChild(styleEl);
+</script>
+
 </body>
 </html>
