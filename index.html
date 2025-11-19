@@ -1,102 +1,200 @@
-<!-- Mantén todo igual que antes hasta el botón Comprar Todo -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEYSER STORE - Tienda Premium</title>
+  <meta name="description" content="Los mejores productos premium con reseñas honestas">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0f0f0f;--accent:#e91e63;--text:#fff;--card:#1e1e1e;--gray:#888}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:var(--primary);color:var(--text);line-height:1.6}
+    header{background:var(--primary);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5)}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .flex{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:2rem;font-weight:700;color:var(--accent)}
+    #search{flex:1;padding:12px 20px;border:none;border-radius:50px;font-size:1rem;background:#333;color:white;max-width:600px}
+    main{margin-top:100px;padding:40px 0}
+    h1{text-align:center;font-size:3rem;margin-bottom:3rem;background:linear-gradient(90deg,#e91e63,#ff9800);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:30px;padding:0 20px}
+    .product{background:var(--card);border-radius:16px;overflow:hidden;transition:.3s;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+    .product:hover{transform:translateY(-10px)}
+    .product img{width:100%;height:220px;object-fit:cover}
+    .info{padding:20px}
+    .info h3{font-size:1.4rem;margin-bottom:8px}
+    .price{font-size:1.8rem;font-weight:700;color:var(--accent);margin:10px 0}
+    .buy-btn{width:100%;padding:14px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;margin-top:15px;transition:.3s}
+    .buy-btn:hover{background:#c2185b}
+    footer{text-align:center;padding:60px 20px;color:#666;margin-top:80px;border-top:1px solid #333}
+    .no-results{text-align:center;font-size:1.5rem;color:#aaa;grid-column:1/-1;padding:60px}
+    
+    /* Responsive */
+    @media(max-width:768px){
+      h1{font-size:2rem}
+      main{padding:20px 0}
+      #search{max-width:100%}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container flex">
+    <div class="logo">GEYSER STORE</div>
+    <input type="text" id="search" placeholder="Buscar productos..." aria-label="Buscar productos" autofocus>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Productos Premium Seleccionados</h1>
+
+  <div class="products-grid" id="products">
+    <!-- 12 productos -->
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61Z5q8L9qVL._AC_SX425_.jpg" alt="iPhone 15 Pro">
+      <div class="info">
+        <h3>iPhone 15 Pro 256GB</h3>
+        <div class="price">1.259 €</div>
+        <a href="https://www.amazon.es/dp/B0CHY5WDBZ" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71p9GO1-YVL._AC_SX425_.jpg" alt="MacBook Air M3">
+      <div class="info">
+        <h3>MacBook Air M3 13″</h3>
+        <div class="price">1.299 €</div>
+        <a href="https://www.amazon.es/dp/B0CX23V2ZK" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61k0iKIFVWL._AC_SX425_.jpg" alt="Sony WH-1000XM5">
+      <div class="info">
+        <h3>Sony WH-1000XM5</h3>
+        <div class="price">349 €</div>
+        <a href="https://www.amazon.es/dp/B09Y2MYL5F" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61fHm7s3-LL._AC_SX425_.jpg" alt="Samsung Galaxy S23 Ultra">
+      <div class="info">
+        <h3>Samsung Galaxy S23 Ultra 512GB</h3>
+        <div class="price">1.349 €</div>
+        <a href="https://www.amazon.es/dp/B0BR4F9H2C" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71hIfcIPyxS._AC_SX425_.jpg" alt="iPad Pro 12.9">
+      <div class="info">
+        <h3>iPad Pro 12.9″ 2023</h3>
+        <div class="price">1.399 €</div>
+        <a href="https://www.amazon.es/dp/B0BDJ5PBL3" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71HGkb1OjlL._AC_SX425_.jpg" alt="PlayStation 5">
+      <div class="info">
+        <h3>PlayStation 5 Edición Digital</h3>
+        <div class="price">499 €</div>
+        <a href="https://www.amazon.es/dp/B09VGFZ4PH" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71c7JjFHzQL._AC_SX425_.jpg" alt="Apple Watch Series 9">
+      <div class="info">
+        <h3>Apple Watch Series 9</h3>
+        <div class="price">449 €</div>
+        <a href="https://www.amazon.es/dp/B0BBSVDFXY" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/81kP5YjKJvL._AC_SX425_.jpg" alt="Kindle Paperwhite">
+      <div class="info">
+        <h3>Kindle Paperwhite 2023</h3>
+        <div class="price">139 €</div>
+        <a href="https://www.amazon.es/dp/B09BMLVQ16" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61U4Zff2uGL._AC_SX425_.jpg" alt="Bose QuietComfort 45">
+      <div class="info">
+        <h3>Bose QuietComfort 45</h3>
+        <div class="price">329 €</div>
+        <a href="https://www.amazon.es/dp/B08CX8Y9KR" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71a3H6O8JML._AC_SX425_.jpg" alt="Dell XPS 15">
+      <div class="info">
+        <h3>Dell XPS 15 2024</h3>
+        <div class="price">1.749 €</div>
+        <a href="https://www.amazon.es/dp/B0B6FJ8T7M" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61s4x7cqkFL._AC_SX425_.jpg" alt="Nintendo Switch OLED">
+      <div class="info">
+        <h3>Nintendo Switch OLED</h3>
+        <div class="price">349 €</div>
+        <a href="https://www.amazon.es/dp/B09V2N9F5H" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61TuI0ZcYwL._AC_SX425_.jpg" alt="GoPro Hero 12">
+      <div class="info">
+        <h3>GoPro Hero 12 Black</h3>
+        <div class="price">549 €</div>
+        <a href="https://www.amazon.es/dp/B0BFSKY4N6" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 GEYSER STORE • Todos los derechos reservados</p>
+  <p style="font-size:0.9rem;margin-top:10px;">
+    Como asociado de Amazon, gano ingresos por las compras calificadas que cumplan los requisitos aplicables.
+  </p>
+  <p><a href="privacy.html" style="color:#888">Política de Privacidad</a></p>
+</footer>
 
 <script>
-const search=document.getElementById('search');
-const products=document.querySelectorAll('.product');
-const cartButton=document.getElementById('cart');
-const cartPanel=document.getElementById('cartPanel');
-const cartItemsContainer=document.getElementById('cartItems');
-const cartTotal=document.getElementById('cartTotal');
-const buyAllButton=document.getElementById('buyAll');
-const cartCountEl=document.getElementById('cartCount');
-const addSound=document.getElementById('addSound');
+  const search=document.getElementById('search');
+  const products=document.querySelectorAll('.product');
 
-function debounce(func, wait=300){ let timeout; return function(...args){ clearTimeout(timeout); timeout=setTimeout(()=>func.apply(this,args),wait);}; }
-search.addEventListener('input',debounce((e)=>{ const term=e.target.value.toLowerCase(); let visible=0; products.forEach(p=>{ if(p.dataset.name.includes(term)){p.style.display='block';visible++;}else{p.style.display='none';} }); let noResults=document.querySelector('.no-results'); if(!noResults && visible===0) document.getElementById('products').insertAdjacentHTML('beforeend','<div class="no-results">🔍 No se encontraron productos con ese nombre</div>'); else if(noResults && visible>0) noResults.remove();},300));
+  search.addEventListener('input', e => {
+    const term = e.target.value.toLowerCase();
+    let visible = 0;
 
-function loadCart(){return JSON.parse(localStorage.getItem('cart'))||[];}
-function saveCart(cart){localStorage.setItem('cart',JSON.stringify(cart));}
+    products.forEach(p => {
+      const title = p.querySelector('h3').textContent.toLowerCase();
+      if(title.includes(term)) { 
+        p.style.display = 'block'; 
+        visible++; 
+      } else { 
+        p.style.display = 'none'; 
+      }
+    });
 
-function updateCartUI(){
-  const cart=loadCart();
-  cartCountEl.textContent=cart.length;
-  cartCountEl.style.transform='scale(1.4)';
-  cartButton.classList.add('cart-shake');
-  setTimeout(()=>{cartCountEl.style.transform='scale(1)'; cartButton.classList.remove('cart-shake');},300);
-  cartItemsContainer.innerHTML='';
-  let total=0;
-  cart.forEach((item,index)=>{total+=parseFloat(item.price); const div=document.createElement('div'); div.classList.add('cart-item'); div.innerHTML=`<img src="${item.img}" alt="${item.name}"><div class="cart-item-info"><span>${item.name}</span><span>$${item.price}</span></div><button data-index="${index}">✖</button>`; cartItemsContainer.appendChild(div);});
-  cartTotal.textContent=`$${total.toFixed(2)}`;
-  document.querySelectorAll('.cart-item button').forEach(btn=>{btn.addEventListener('click',()=>{ const idx=btn.dataset.index; const c=loadCart(); c.splice(idx,1); saveCart(c); updateCartUI(); }); });
-}
-
-function flyToCart(imgEl){
-  const rect=imgEl.getBoundingClientRect();
-  const flyImg=imgEl.cloneNode(true);
-  flyImg.classList.add('fly-img');
-  document.body.appendChild(flyImg);
-  flyImg.style.left=`${rect.left}px`;
-  flyImg.style.top=`${rect.top}px`;
-  const cartRect=cartButton.getBoundingClientRect();
-  requestAnimationFrame(()=>{ flyImg.style.transform=`translate(${cartRect.left-rect.left}px, ${cartRect.top-rect.top}px) scale(0.2)`; });
-  flyImg.addEventListener('transitionend',()=>{ flyImg.remove(); });
-}
-
-function createConfetti(){
-  for(let i=0;i<30;i++){
-    const confetti=document.createElement('div');
-    confetti.classList.add('confetti');
-    confetti.style.left=Math.random()*window.innerWidth+'px';
-    confetti.style.background=`hsl(${Math.random()*360},100%,50%)`;
-    confetti.style.animationDuration=(Math.random()*1+0.8)+'s';
-    confetti.style.transform=`rotate(${Math.random()*360}deg)`;
-    document.body.appendChild(confetti);
-    setTimeout(()=>confetti.remove(),1500);
-  }
-}
-
-function createExplosion(x,y){
-  for(let i=0;i<50;i++){
-    const particle=document.createElement('div');
-    particle.classList.add('confetti');
-    particle.style.left=x+'px';
-    particle.style.top=y+'px';
-    particle.style.width=particle.style.height=Math.random()*8+4+'px';
-    particle.style.background=`hsl(${Math.random()*360},100%,50%)`;
-    particle.style.animationDuration=(Math.random()*1+0.8)+'s';
-    const angle=Math.random()*2*Math.PI;
-    const distance=Math.random()*150+50;
-    particle.style.transform=`translate(${Math.cos(angle)*distance}px, ${Math.sin(angle)*distance}px) rotate(${Math.random()*360}deg)`;
-    document.body.appendChild(particle);
-    setTimeout(()=>particle.remove(),2000);
-  }
-}
-
-function addToCart(name,price,img,imgEl){
-  const cart=loadCart();
-  cart.push({name,price,img});
-  saveCart(cart);
-  updateCartUI();
-  flyToCart(imgEl);
-  addSound.currentTime=0; addSound.play();
-  createConfetti();
-}
-
-document.querySelectorAll('.add-cart').forEach((btn,index)=>{ btn.addEventListener('click',()=>{ const p=products[index]; addToCart(p.dataset.name,p.dataset.price,p.dataset.img,p.querySelector('img')); }); });
-
-cartButton.addEventListener('click',()=>cartPanel.classList.toggle('open'));
-
-buyAllButton.addEventListener('click',()=>{
-  const cart=loadCart(); 
-  if(cart.length===0){alert('Tu carrito está vacío');return;}
-  const cartRect=cartButton.getBoundingClientRect();
-  createExplosion(cartRect.left+cartRect.width/2, cartRect.top+cartRect.height/2);
-  setTimeout(()=>{
-    alert(`¡Compra simulada realizada!\nTotal: $${cart.reduce((sum,i)=>sum+parseFloat(i.price),0).toFixed(2)}`);
-    localStorage.removeItem('cart'); 
-    updateCartUI();
-  },500);
-});
-
-updateCartUI();
+    const nr = document.querySelector('.no-results');
+    if(!nr && visible === 0) {
+      document.getElementById('products').insertAdjacentHTML('beforeend','<div class="no-results">No se encontraron productos</div>');
+    } else if(nr && visible > 0) {
+      nr.remove();
+    }
+  });
 </script>
+</body>
+</html>
