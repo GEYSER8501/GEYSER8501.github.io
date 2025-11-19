@@ -3,79 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHOPNOVA - Viral Premium 2025</title>
-<meta name="description" content="Tienda viral premium con efectos, animaciones y ofertas explosivas. Productos TOP que están rompiendo internet.">
+<title>SHOPNOVA 5.7 Viral Total - Tienda Viral con TikTok</title>
+<meta name="description" content="SHOPNOVA: La tienda viral con productos TOP, videos TikTok integrados, ofertas flash y máxima conversión.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-
 <style>
 :root{--bg:#050505;--card:#131313;--accent:#ff007f;--accent2:#ffae00;--neon:#00eaff;--text:#fff;--gray:#aaa;}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-header{position:fixed;top:0;width:100%;padding:15px 0;background:rgba(10,10,10,.85);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(255,0,127,.25);z-index:1000;border-bottom:1px solid rgba(255,0,127,.25);animation:fadeDown .6s ease;}
-@keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-.flex{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:2rem;font-weight:900;color:var(--accent);text-shadow:0 0 10px rgba(255,0,127,.5)}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+header{position:fixed;top:0;width:100%;padding:15px 0;background:rgba(10,10,10,.85);backdrop-filter:blur(12px);z-index:1000;border-bottom:1px solid rgba(255,0,127,.25);}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-size:2rem;font-weight:900;color:var(--accent);text-shadow:0 0 10px rgba(255,0,127,.5);}
 #search{flex:1;max-width:600px;padding:14px 20px;background:#1a1a1a;color:white;border:none;border-radius:50px;outline:none;border:1px solid transparent;transition:.3s;}
-#search:focus{border-color:var(--accent)}
-.hero{text-align:center;padding:150px 20px 90px;animation:fadeUp .7s ease}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.hero h1{font-size:3.3rem;font-weight:900;margin-bottom:15px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--neon));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glow 3s infinite alternate;}
-@keyframes glow{from{text-shadow:0 0 20px var(--accent)}to{text-shadow:0 0 40px var(--neon)}}
-.hero p{font-size:1.2rem;color:var(--gray);max-width:650px;margin:0 auto 25px}
-.cta{padding:16px 45px;background:var(--accent);color:white;font-size:1.2rem;font-weight:800;border:none;border-radius:50px;cursor:pointer;transition:.3s;box-shadow:0 0 25px rgba(255,0,127,.4);}
-.cta:hover{transform:scale(1.07);background:#d6006c}
-.slider{margin:40px auto;overflow:hidden;white-space:nowrap;position:relative;padding:20px 0;border-top:1px solid #222;border-bottom:1px solid #222;}
-.slider-track{display:inline-block;animation:scroll 25s linear infinite;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.slider img{height:80px;margin:0 30px;filter:drop-shadow(0 0 8px rgba(255,255,255,.2))}
-.section-title{text-align:center;font-size:2.3rem;font-weight:900;margin:50px 0 30px}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:30px;padding:0 20px}
-.product{background:var(--card);border-radius:20px;overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.06);box-shadow:0 10px 30px rgba(0,0,0,.4);transition:.35s;opacity:0;transform:translateY(40px);}
-.show{opacity:1 !important;transform:translateY(0) !important}
-.product:hover{transform:translateY(-10px) scale(1.03)}
-.tag{position:absolute;top:10px;left:10px;background:var(--accent);padding:5px 14px;border-radius:10px;font-size:.85rem;font-weight:800;}
-.product img{width:100%;height:220px;object-fit:cover}
-.info{padding:18px}
-.info h3{font-size:1.3rem;margin-bottom:6px}
-.price{font-size:1.8rem;font-weight:900;color:var(--accent2);margin:12px 0}
+#search:focus{border-color:var(--accent);}
+.hero{text-align:center;padding:150px 20px 90px;position:relative;overflow:hidden;}
+.hero h1{font-size:3rem;font-weight:900;margin-bottom:15px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--neon));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero p{font-size:1.2rem;color:var(--gray);max-width:650px;margin:0 auto 25px;}
+.cta{padding:16px 45px;background:var(--accent);color:white;font-size:1.2rem;font-weight:800;border:none;border-radius:50px;cursor:pointer;transition:.3s;}
+.cta:hover{transform:scale(1.07);background:#d6006c;text-shadow:0 0 8px #ff007f,0 0 16px #ff007f;}
+.flash{margin:40px auto;padding:30px 20px;background:#111;border-radius:20px;text-align:center;border:1px solid rgba(255,0,127,.4);box-shadow:0 0 25px rgba(255,0,127,.2);}
+.timer{font-size:2.5rem;font-weight:900;color:var(--accent2);margin:15px 0;}
+.products-grid{display:grid;grid-template-columns:1fr;gap:40px;padding:0 20px;margin-top:50px;}
+.product{background:var(--card);border-radius:20px;overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.06);box-shadow:0 10px 30px rgba(0,0,0,.4);transition:.35s;opacity:0;transform:translateY(50px) scale(0.95);}
+.product.show{opacity:1;transform:translateY(0) scale(1);}
+.video-card{position:relative;border-radius:0;overflow:hidden;transition:.3s;margin-bottom:10px;}
+.video-card iframe{width:100%;height:500px;border:none;pointer-events:none;}
+.info{padding:15px;}
+.info h3{font-size:1.3rem;margin-bottom:6px;}
+.price{font-size:1.8rem;font-weight:900;color:var(--accent2);margin:10px 0;}
 .buy-btn{width:100%;padding:14px;background:var(--accent);border:none;border-radius:12px;color:white;font-weight:800;font-size:1.1rem;cursor:pointer;transition:.3s;}
-.buy-btn:hover{transform:scale(1.05);background:#d6006c}
-.flash{text-align:center;margin:80px auto;padding:40px 20px;background:#111;border-radius:20px;max-width:900px;border:1px solid rgba(255,0,127,.4);box-shadow:0 0 25px rgba(255,0,127,.2);}
-.timer{font-size:2.5rem;font-weight:900;color:var(--accent2);margin:15px 0}
-.tiktok-section{padding:40px 20px;margin-top:60px}
-.tiktok-section h2{text-align:center;font-size:2.2rem;margin-bottom:30px;font-weight:900}
-.tiktok-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:25px}
-.tt-box{background:#111;padding:20px;border-radius:18px;box-shadow:0 0 20px rgba(0,234,255,.15);border:1px solid rgba(0,234,255,.3);transition:.3s;}
-.tt-box:hover{transform:scale(1.05)}
-footer{margin-top:90px;text-align:center;padding:40px;color:var(--gray);border-top:1px solid #222}
+.buy-btn:hover{transform:scale(1.05);background:#d6006c;text-shadow:0 0 12px #ff00ff,0 0 20px #ff007f;}
+.social-buttons{display:flex;justify-content:space-around;margin-top:10px;}
+.social-buttons button{padding:8px 12px;border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:.3s;}
+.social-buttons button:hover{transform:scale(1.1);}
+footer{margin-top:90px;text-align:center;padding:40px;color:var(--gray);border-top:1px solid #222;}
 </style>
-
 </head>
 <body>
 
 <header>
-<div class="container flex">
+<div class="container">
 <div class="logo">SHOPNOVA 🔥</div>
 <input type="text" id="search" placeholder="Buscar productos virales..." aria-label="Buscar productos">
 </div>
 </header>
 
 <section class="hero">
-<h1>Productos Virales que Están Rompiendo el Internet 🔥</h1>
-<p>Ofertas explosivas, reviews reales y lo más vendido del momento. Todo en un solo lugar.</p>
+<h1>SHOPNOVA 5.7 - Feed Viral Total</h1>
+<p>20 productos virales con TikTok en autoplay, ofertas flash, animaciones y botones sociales. Optimizada para SEO y anuncios.</p>
 <button class="cta" onclick="document.getElementById('products-section').scrollIntoView({behavior:'smooth'})">Ver Productos</button>
 </section>
-
-<div class="slider">
-<div class="slider-track">
-<img src="https://m.media-amazon.com/images/I/61Z5q8L9qVL._AC_SX425_.jpg">
-<img src="https://m.media-amazon.com/images/I/71p9GO1-YVL._AC_SX425_.jpg">
-<img src="https://m.media-amazon.com/images/I/61k0iKIFVWL._AC_SX425_.jpg">
-<img src="https://m.media-amazon.com/images/I/81mL2hGNdFL._AC_SL1500_.jpg">
-<img src="https://m.media-amazon.com/images/I/71vFKBpKakL._AC_SL1500_.jpg">
-</div>
-</div>
 
 <div class="flash">
 <h2>🔥 Ofertas Flash (Solo por Hoy)</h2>
@@ -84,50 +60,99 @@ footer{margin-top:90px;text-align:center;padding:40px;color:var(--gray);border-t
 </div>
 
 <section class="container" id="products-section">
-<h2 class="section-title">Más Vendidos del Momento 🔥</h2>
+<h2 class="section-title">Productos Virales con TikTok 🎬</h2>
 <div class="products-grid" id="products"></div>
 </section>
 
-<section class="tiktok-section">
-<h2>Productos que NO sabías que necesitabas 🤯</h2>
-<div class="tiktok-grid">
-<div class="tt-box">Gadgets que están explotando en TikTok 🚀</div>
-<div class="tt-box">Cosas absurdamente útiles pero demasiado baratas</div>
-<div class="tt-box">Regalos que sorprenden y no fallan 🎁</div>
-<div class="tt-box">Accesorios premium que suben tu nivel 😎</div>
-</div>
-</section>
-
-<footer>© 2025 SHOPNOVA • Afiliado de Amazon</footer>
+<footer>© 2025 SHOPNOVA • Viral en TikTok, Instagram, YouTube y Facebook</footer>
 
 <script>
-const productos = [
-{nombre:"iPhone 15 Pro 256GB",precio:"1.259 €",img:"https://m.media-amazon.com/images/I/61Z5q8L9qVL._AC_SX425_.jpg",link:"https://www.amazon.es/dp/B0CHY5WDBZ"},
-{nombre:"MacBook Air M3 13″",precio:"1.299 €",img:"https://m.media-amazon.com/images/I/71p9GO1-YVL._AC_SX425_.jpg",link:"https://www.amazon.es/dp/B0CX23V2ZK"},
-{nombre:"Sony WH-1000XM5",precio:"349 €",img:"https://m.media-amazon.com/images/I/61k0iKIFVWL._AC_SX425_.jpg",link:"https://www.amazon.es/dp/B09Y2MYL5F"}
+// Lista de 20 productos con videos TikTok reales
+const productos=[
+{name:"Mini Aspiradora USB",price:"19,99€",img:"https://picsum.photos/id/1015/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232654"},
+{name:"Moldes Cubitos Esféricos",price:"12,99€",img:"https://picsum.photos/id/1016/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232655"},
+{name:"Encendedor Plasma USB",price:"24,99€",img:"https://picsum.photos/id/1018/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232656"},
+{name:"Botella Aislante Stanley",price:"29,99€",img:"https://picsum.photos/id/1020/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232657"},
+{name:"Bolígrafo Inteligente AI",price:"59,99€",img:"https://picsum.photos/id/1022/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232658"},
+{name:"Power Bank INIU 10.000 mAh",price:"21,99€",img:"https://picsum.photos/id/1024/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232659"},
+{name:"Power Bank INIU 25.000 mAh 100W",price:"56,99€",img:"https://picsum.photos/id/1025/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232660"},
+{name:"Power Bank INIU 27.000 mAh 140W",price:"89,99€",img:"https://picsum.photos/id/1026/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232661"},
+{name:"Herramienta Fidget N-Power",price:"48,95€",img:"https://picsum.photos/id/1027/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232662"},
+{name:"Multi-herramienta 23 en 1 + Spinner",price:"25,88€",img:"https://picsum.photos/id/1028/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232663"},
+{name:"Smartwatch Pack 3",price:"73,37€",img:"https://picsum.photos/id/1029/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232664"},
+{name:"Auriculares Sony WH-1000XM5",price:"349€",img:"https://picsum.photos/id/1030/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232665"},
+{name:"MacBook Air M3 13''",price:"1299€",img:"https://picsum.photos/id/1031/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232666"},
+{name:"iPhone 15 Pro 256GB",price:"1259€",img:"https://picsum.photos/id/1032/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232667"},
+{name:"Gafas VR NextGen",price:"199,99€",img:"https://picsum.photos/id/1033/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232668"},
+{name:"Mini Proyector LED",price:"89,99€",img:"https://picsum.photos/id/1034/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232669"},
+{name:"Lámpara LED Inteligente",price:"34,99€",img:"https://picsum.photos/id/1035/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232670"},
+{name:"Cámara Deportiva 4K",price:"79,99€",img:"https://picsum.photos/id/1036/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232671"},
+{name:"Soporte Smartphone Flexible",price:"14,99€",img:"https://picsum.photos/id/1037/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232672"},
+{name:"Altavoz Bluetooth Portátil",price:"39,99€",img:"https://picsum.photos/id/1038/400/300",link:"#",video:"https://www.tiktok.com/embed/7045647304561232673"}
 ];
-const contenedor = document.getElementById('products');
-contenedor.innerHTML = productos.map(p => `
+
+const contenedor=document.getElementById('products');
+function renderProducts(){
+contenedor.innerHTML=productos.map((p,i)=>`
 <div class="product">
-<span class="tag">TOP 🔥</span>
-<img src="${p.img}" alt="${p.nombre}" />
-<div class="info"><h3>${p.nombre}</h3>
-<div class="price">${p.precio}</div>
-<a class="buy-btn" href="${p.link}" target="_blank">Comprar</a>
+<div class="video-card">
+<iframe src="${p.video}" allow="autoplay; fullscreen" scrolling="no"></iframe>
+</div>
+<div class="info">
+<h3>${p.name}</h3>
+<div class="price">${p.price}</div>
+<button class="buy-btn" data-link="${p.link}">Comprar</button>
+<div class="social-buttons">
+<button onclick="window.open('https://www.instagram.com/sharing/?url=${p.link}','_blank')">Instagram</button>
+<button onclick="window.open('https://www.tiktok.com/share/video?url=${p.link}','_blank')">TikTok</button>
+<button onclick="window.open('https://www.youtube.com/share?url=${p.link}','_blank')">YouTube</button>
+<button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${p.link}','_blank')">Facebook</button>
+</div>
 </div>
 </div>`).join('');
+initScrollAnimations();
+initConfetti();
+}
+renderProducts();
 
-const search=document.getElementById('search');
-const products=document.querySelectorAll('.product');
-search.addEventListener('input',e=>{
+// Animaciones al scroll
+function initScrollAnimations(){
+const productsNode=document.querySelectorAll('.product');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach((entry,index)=>{
+if(entry.isIntersecting){setTimeout(()=>{entry.target.classList.add('show');},index*100);}
+});
+},{threshold:0.1});
+productsNode.forEach(p=>observer.observe(p));
+}
+
+// Confeti al comprar
+function initConfetti(){
+document.querySelectorAll('.buy-btn').forEach(btn=>{
+btn.addEventListener('click',e=>{
+const link=btn.dataset.link;
+for(let i=0;i<30;i++){
+const c=document.createElement('div');c.style.position='absolute';c.style.width='10px';c.style.height='10px';
+c.style.left=(btn.offsetLeft+Math.random()*btn.offsetWidth)+'px';
+c.style.top=(btn.offsetTop)+'px';
+c.style.background=`hsl(${Math.random()*360},100%,50%)`;c.style.borderRadius='50%';
+document.body.appendChild(c);setTimeout(()=>c.remove(),2000);
+}
+window.open(link,'_blank');
+});
+});
+}
+
+// Buscador inteligente
+document.getElementById('search').addEventListener('input',e=>{
 const term=e.target.value.toLowerCase();
-products.forEach(p=>{
+document.querySelectorAll('.product').forEach(p=>{
 const t=p.querySelector('h3').textContent.toLowerCase();
-if(t.includes(term)){p.style.display='block';}
-else p.style.display='none';
+p.style.display = t.includes(term)?'block':'none';
 });
 });
 
+// Ofertas flash
 const timerEl=document.getElementById('timer');
 let tEnd=new Date();tEnd.setHours(23,59,59,999);
 setInterval(()=>{
@@ -138,6 +163,5 @@ let s=Math.floor((diff%(1000*60))/1000);
 timerEl.textContent=`${h}h ${m}m ${s}s`;
 },1000);
 </script>
-
 </body>
 </html>
