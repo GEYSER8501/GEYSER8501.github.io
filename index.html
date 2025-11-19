@@ -1,200 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEYSER STORE - Tienda Premium</title>
-  <meta name="description" content="Los mejores productos premium con reseñas honestas">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--primary:#0f0f0f;--accent:#e91e63;--text:#fff;--card:#1e1e1e;--gray:#888}
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:var(--primary);color:var(--text);line-height:1.6}
-    header{background:var(--primary);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.5)}
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    .flex{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .logo{font-size:2rem;font-weight:700;color:var(--accent)}
-    #search{flex:1;padding:12px 20px;border:none;border-radius:50px;font-size:1rem;background:#333;color:white;max-width:600px}
-    main{margin-top:100px;padding:40px 0}
-    h1{text-align:center;font-size:3rem;margin-bottom:3rem;background:linear-gradient(90deg,#e91e63,#ff9800);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:30px;padding:0 20px}
-    .product{background:var(--card);border-radius:16px;overflow:hidden;transition:.3s;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-    .product:hover{transform:translateY(-10px)}
-    .product img{width:100%;height:220px;object-fit:cover}
-    .info{padding:20px}
-    .info h3{font-size:1.4rem;margin-bottom:8px}
-    .price{font-size:1.8rem;font-weight:700;color:var(--accent);margin:10px 0}
-    .buy-btn{width:100%;padding:14px;background:var(--accent);color:white;border:none;border-radius:8px;font-size:1.1rem;font-weight:600;cursor:pointer;margin-top:15px;transition:.3s}
-    .buy-btn:hover{background:#c2185b}
-    footer{text-align:center;padding:60px 20px;color:#666;margin-top:80px;border-top:1px solid #333}
-    .no-results{text-align:center;font-size:1.5rem;color:#aaa;grid-column:1/-1;padding:60px}
-    
-    /* Responsive */
-    @media(max-width:768px){
-      h1{font-size:2rem}
-      main{padding:20px 0}
-      #search{max-width:100%}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOPNOVA - Viral Premium 2025</title>
+<meta name="description" content="Tienda viral premium con efectos, animaciones y ofertas explosivas. Productos TOP que están rompiendo internet.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#050505;--card:#131313;--accent:#ff007f;--accent2:#ffae00;--neon:#00eaff;--text:#fff;--gray:#aaa;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+header{position:fixed;top:0;width:100%;padding:15px 0;background:rgba(10,10,10,.85);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(255,0,127,.25);z-index:1000;border-bottom:1px solid rgba(255,0,127,.25);animation:fadeDown .6s ease;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.flex{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:2rem;font-weight:900;color:var(--accent);text-shadow:0 0 10px rgba(255,0,127,.5)}
+#search{flex:1;max-width:600px;padding:14px 20px;background:#1a1a1a;color:white;border:none;border-radius:50px;outline:none;border:1px solid transparent;transition:.3s;}
+#search:focus{border-color:var(--accent)}
+.hero{text-align:center;padding:150px 20px 90px;animation:fadeUp .7s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-size:3.3rem;font-weight:900;margin-bottom:15px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--neon));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glow 3s infinite alternate;}
+@keyframes glow{from{text-shadow:0 0 20px var(--accent)}to{text-shadow:0 0 40px var(--neon)}}
+.hero p{font-size:1.2rem;color:var(--gray);max-width:650px;margin:0 auto 25px}
+.cta{padding:16px 45px;background:var(--accent);color:white;font-size:1.2rem;font-weight:800;border:none;border-radius:50px;cursor:pointer;transition:.3s;box-shadow:0 0 25px rgba(255,0,127,.4);}
+.cta:hover{transform:scale(1.07);background:#d6006c}
+.slider{margin:40px auto;overflow:hidden;white-space:nowrap;position:relative;padding:20px 0;border-top:1px solid #222;border-bottom:1px solid #222;}
+.slider-track{display:inline-block;animation:scroll 25s linear infinite;}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.slider img{height:80px;margin:0 30px;filter:drop-shadow(0 0 8px rgba(255,255,255,.2))}
+.section-title{text-align:center;font-size:2.3rem;font-weight:900;margin:50px 0 30px}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:30px;padding:0 20px}
+.product{background:var(--card);border-radius:20px;overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.06);box-shadow:0 10px 30px rgba(0,0,0,.4);transition:.35s;opacity:0;transform:translateY(40px);}
+.show{opacity:1 !important;transform:translateY(0) !important}
+.product:hover{transform:translateY(-10px) scale(1.03)}
+.tag{position:absolute;top:10px;left:10px;background:var(--accent);padding:5px 14px;border-radius:10px;font-size:.85rem;font-weight:800;}
+.product img{width:100%;height:220px;object-fit:cover}
+.info{padding:18px}
+.info h3{font-size:1.3rem;margin-bottom:6px}
+.price{font-size:1.8rem;font-weight:900;color:var(--accent2);margin:12px 0}
+.buy-btn{width:100%;padding:14px;background:var(--accent);border:none;border-radius:12px;color:white;font-weight:800;font-size:1.1rem;cursor:pointer;transition:.3s;}
+.buy-btn:hover{transform:scale(1.05);background:#d6006c}
+.flash{text-align:center;margin:80px auto;padding:40px 20px;background:#111;border-radius:20px;max-width:900px;border:1px solid rgba(255,0,127,.4);box-shadow:0 0 25px rgba(255,0,127,.2);}
+.timer{font-size:2.5rem;font-weight:900;color:var(--accent2);margin:15px 0}
+.tiktok-section{padding:40px 20px;margin-top:60px}
+.tiktok-section h2{text-align:center;font-size:2.2rem;margin-bottom:30px;font-weight:900}
+.tiktok-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:25px}
+.tt-box{background:#111;padding:20px;border-radius:18px;box-shadow:0 0 20px rgba(0,234,255,.15);border:1px solid rgba(0,234,255,.3);transition:.3s;}
+.tt-box:hover{transform:scale(1.05)}
+footer{margin-top:90px;text-align:center;padding:40px;color:var(--gray);border-top:1px solid #222}
+</style>
+
 </head>
 <body>
 
 <header>
-  <div class="container flex">
-    <div class="logo">GEYSER STORE</div>
-    <input type="text" id="search" placeholder="Buscar productos..." aria-label="Buscar productos" autofocus>
-  </div>
+<div class="container flex">
+<div class="logo">SHOPNOVA 🔥</div>
+<input type="text" id="search" placeholder="Buscar productos virales..." aria-label="Buscar productos">
+</div>
 </header>
 
-<main class="container">
-  <h1>Productos Premium Seleccionados</h1>
+<section class="hero">
+<h1>Productos Virales que Están Rompiendo el Internet 🔥</h1>
+<p>Ofertas explosivas, reviews reales y lo más vendido del momento. Todo en un solo lugar.</p>
+<button class="cta" onclick="document.getElementById('products-section').scrollIntoView({behavior:'smooth'})">Ver Productos</button>
+</section>
 
-  <div class="products-grid" id="products">
-    <!-- 12 productos -->
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61Z5q8L9qVL._AC_SX425_.jpg" alt="iPhone 15 Pro">
-      <div class="info">
-        <h3>iPhone 15 Pro 256GB</h3>
-        <div class="price">1.259 €</div>
-        <a href="https://www.amazon.es/dp/B0CHY5WDBZ" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
+<div class="slider">
+<div class="slider-track">
+<img src="https://m.media-amazon.com/images/I/61Z5q8L9qVL._AC_SX425_.jpg">
+<img src="https://m.media-amazon.com/images/I/71p9GO1-YVL._AC_SX425_.jpg">
+<img src="https://m.media-amazon.com/images/I/61k0iKIFVWL._AC_SX425_.jpg">
+<img src="https://m.media-amazon.com/images/I/81mL2hGNdFL._AC_SL1500_.jpg">
+<img src="https://m.media-amazon.com/images/I/71vFKBpKakL._AC_SL1500_.jpg">
+</div>
+</div>
 
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71p9GO1-YVL._AC_SX425_.jpg" alt="MacBook Air M3">
-      <div class="info">
-        <h3>MacBook Air M3 13″</h3>
-        <div class="price">1.299 €</div>
-        <a href="https://www.amazon.es/dp/B0CX23V2ZK" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
+<div class="flash">
+<h2>🔥 Ofertas Flash (Solo por Hoy)</h2>
+<div id="timer" class="timer"></div>
+<p>Estas ofertas desaparecen cuando el contador llegue a cero.</p>
+</div>
 
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61k0iKIFVWL._AC_SX425_.jpg" alt="Sony WH-1000XM5">
-      <div class="info">
-        <h3>Sony WH-1000XM5</h3>
-        <div class="price">349 €</div>
-        <a href="https://www.amazon.es/dp/B09Y2MYL5F" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
+<section class="container" id="products-section">
+<h2 class="section-title">Más Vendidos del Momento 🔥</h2>
+<div class="products-grid" id="products"></div>
+</section>
 
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61fHm7s3-LL._AC_SX425_.jpg" alt="Samsung Galaxy S23 Ultra">
-      <div class="info">
-        <h3>Samsung Galaxy S23 Ultra 512GB</h3>
-        <div class="price">1.349 €</div>
-        <a href="https://www.amazon.es/dp/B0BR4F9H2C" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
+<section class="tiktok-section">
+<h2>Productos que NO sabías que necesitabas 🤯</h2>
+<div class="tiktok-grid">
+<div class="tt-box">Gadgets que están explotando en TikTok 🚀</div>
+<div class="tt-box">Cosas absurdamente útiles pero demasiado baratas</div>
+<div class="tt-box">Regalos que sorprenden y no fallan 🎁</div>
+<div class="tt-box">Accesorios premium que suben tu nivel 😎</div>
+</div>
+</section>
 
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71hIfcIPyxS._AC_SX425_.jpg" alt="iPad Pro 12.9">
-      <div class="info">
-        <h3>iPad Pro 12.9″ 2023</h3>
-        <div class="price">1.399 €</div>
-        <a href="https://www.amazon.es/dp/B0BDJ5PBL3" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71HGkb1OjlL._AC_SX425_.jpg" alt="PlayStation 5">
-      <div class="info">
-        <h3>PlayStation 5 Edición Digital</h3>
-        <div class="price">499 €</div>
-        <a href="https://www.amazon.es/dp/B09VGFZ4PH" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71c7JjFHzQL._AC_SX425_.jpg" alt="Apple Watch Series 9">
-      <div class="info">
-        <h3>Apple Watch Series 9</h3>
-        <div class="price">449 €</div>
-        <a href="https://www.amazon.es/dp/B0BBSVDFXY" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/81kP5YjKJvL._AC_SX425_.jpg" alt="Kindle Paperwhite">
-      <div class="info">
-        <h3>Kindle Paperwhite 2023</h3>
-        <div class="price">139 €</div>
-        <a href="https://www.amazon.es/dp/B09BMLVQ16" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61U4Zff2uGL._AC_SX425_.jpg" alt="Bose QuietComfort 45">
-      <div class="info">
-        <h3>Bose QuietComfort 45</h3>
-        <div class="price">329 €</div>
-        <a href="https://www.amazon.es/dp/B08CX8Y9KR" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71a3H6O8JML._AC_SX425_.jpg" alt="Dell XPS 15">
-      <div class="info">
-        <h3>Dell XPS 15 2024</h3>
-        <div class="price">1.749 €</div>
-        <a href="https://www.amazon.es/dp/B0B6FJ8T7M" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61s4x7cqkFL._AC_SX425_.jpg" alt="Nintendo Switch OLED">
-      <div class="info">
-        <h3>Nintendo Switch OLED</h3>
-        <div class="price">349 €</div>
-        <a href="https://www.amazon.es/dp/B09V2N9F5H" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61TuI0ZcYwL._AC_SX425_.jpg" alt="GoPro Hero 12">
-      <div class="info">
-        <h3>GoPro Hero 12 Black</h3>
-        <div class="price">549 €</div>
-        <a href="https://www.amazon.es/dp/B0BFSKY4N6" target="_blank" rel="nofollow noopener"><button class="buy-btn">Ver en Amazon</button></a>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<footer>
-  <p>© 2025 GEYSER STORE • Todos los derechos reservados</p>
-  <p style="font-size:0.9rem;margin-top:10px;">
-    Como asociado de Amazon, gano ingresos por las compras calificadas que cumplan los requisitos aplicables.
-  </p>
-  <p><a href="privacy.html" style="color:#888">Política de Privacidad</a></p>
-</footer>
+<footer>© 2025 SHOPNOVA • Afiliado de Amazon</footer>
 
 <script>
-  const search=document.getElementById('search');
-  const products=document.querySelectorAll('.product');
+const productos = [
+{nombre:"iPhone 15 Pro 256GB",precio:"1.259 €",img:"https://m.media-amazon.com/images/I/61Z5q8L9qVL._AC_SX425_.jpg",link:"https://www.amazon.es/dp/B0CHY5WDBZ"},
+{nombre:"MacBook Air M3 13″",precio:"1.299 €",img:"https://m.media-amazon.com/images/I/71p9GO1-YVL._AC_SX425_.jpg",link:"https://www.amazon.es/dp/B0CX23V2ZK"},
+{nombre:"Sony WH-1000XM5",precio:"349 €",img:"https://m.media-amazon.com/images/I/61k0iKIFVWL._AC_SX425_.jpg",link:"https://www.amazon.es/dp/B09Y2MYL5F"}
+];
+const contenedor = document.getElementById('products');
+contenedor.innerHTML = productos.map(p => `
+<div class="product">
+<span class="tag">TOP 🔥</span>
+<img src="${p.img}" alt="${p.nombre}" />
+<div class="info"><h3>${p.nombre}</h3>
+<div class="price">${p.precio}</div>
+<a class="buy-btn" href="${p.link}" target="_blank">Comprar</a>
+</div>
+</div>`).join('');
 
-  search.addEventListener('input', e => {
-    const term = e.target.value.toLowerCase();
-    let visible = 0;
+const search=document.getElementById('search');
+const products=document.querySelectorAll('.product');
+search.addEventListener('input',e=>{
+const term=e.target.value.toLowerCase();
+products.forEach(p=>{
+const t=p.querySelector('h3').textContent.toLowerCase();
+if(t.includes(term)){p.style.display='block';}
+else p.style.display='none';
+});
+});
 
-    products.forEach(p => {
-      const title = p.querySelector('h3').textContent.toLowerCase();
-      if(title.includes(term)) { 
-        p.style.display = 'block'; 
-        visible++; 
-      } else { 
-        p.style.display = 'none'; 
-      }
-    });
-
-    const nr = document.querySelector('.no-results');
-    if(!nr && visible === 0) {
-      document.getElementById('products').insertAdjacentHTML('beforeend','<div class="no-results">No se encontraron productos</div>');
-    } else if(nr && visible > 0) {
-      nr.remove();
-    }
-  });
+const timerEl=document.getElementById('timer');
+let tEnd=new Date();tEnd.setHours(23,59,59,999);
+setInterval(()=>{
+let diff=tEnd-new Date();if(diff<=0)return;
+let h=Math.floor(diff/(1000*60*60));
+let m=Math.floor((diff%(1000*60*60))/(1000*60));
+let s=Math.floor((diff%(1000*60))/1000);
+timerEl.textContent=`${h}h ${m}m ${s}s`;
+},1000);
 </script>
+
 </body>
 </html>
