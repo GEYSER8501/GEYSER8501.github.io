@@ -3,75 +3,39 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>SHOPNOVA 5.8 - Viral + CRO + Retargeting</title>
-<meta name="description" content="SHOPNOVA - Tienda viral optimizada para TikTok, Instagram y YouTube. Popups, retargeting y landing de conversión." />
+<title>SHOPNOVA PRO - Tienda Viva</title>
+<meta name="description" content="SHOPNOVA PRO - Tienda viral estilo Amazon, con administración, feed dinámico y retargeting listo." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#050505; --card:#111216; --accent:#ff007f; --accent2:#ffae00; --neon:#00eaff; --text:#fff; --muted:#9aa0a6;
-  --maxw:1200px;
-}
+:root{--bg:#050505;--card:#111216;--accent:#ff007f;--accent2:#ffae00;--neon:#00eaff;--text:#fff;--muted:#9aa0a6;--maxw:1200px;}
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
-header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.6);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,0,127,.08);z-index:1200}
+header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.8);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,0,127,.08);z-index:1200}
 .header-inner{display:flex;align-items:center;gap:18px;max-width:var(--maxw);margin:0 auto;padding:12px 18px}
 .logo{font-weight:900;color:var(--accent);font-size:1.3rem;letter-spacing:.6px}
 .search{margin-left:auto;max-width:420px;width:100%}
 #search{width:100%;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.04);background:#0f0f10;color:var(--text)}
-
-/* HERO */
 .hero{padding:120px 0 40px;text-align:center;position:relative}
 .hero h1{font-size:2.6rem;margin:0;line-height:1.02;font-weight:900;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{color:var(--muted);margin:12px auto 20px;max-width:760px}
 .cta{background:var(--accent);border:none;padding:14px 28px;border-radius:999px;color:#fff;font-weight:800;cursor:pointer;box-shadow:0 6px 30px rgba(255,0,127,.12)}
-.cta.secondary{background:transparent;border:1px solid rgba(255,255,255,.06);padding:12px 20px}
-
-/* FLASH + TRUST */
-.flash{max-width:920px;margin:18px auto;padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);border:1px solid rgba(255,0,127,.08);display:flex;align-items:center;justify-content:space-between;gap:12px}
-.timer{font-weight:900;color:var(--accent2);font-size:1.3rem}
-.trust{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:.95rem}
-
-/* PRODUCTS FEED (single-column "feed" style for mobile-first viral feel) */
-.products-grid{max-width:900px;margin:30px auto 90px;display:grid;gap:36px;padding:0 12px 40px}
-.product{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.03);box-shadow:0 8px 30px rgba(0,0,0,.6)}
-.video-card{background:black}
-.video-card iframe{width:100%;height:560px;border:0;display:block}
-.info{padding:16px}
-.info h3{margin:0;font-size:1.1rem}
-.price{font-weight:900;color:var(--accent2);margin-top:8px;font-size:1.25rem}
-.actions{margin-top:12px;display:flex;gap:10px;align-items:center}
-.btn{flex:1;padding:12px;border-radius:10px;border:none;cursor:pointer;font-weight:800}
-.btn.buy{background:linear-gradient(90deg,var(--accent),#d6006c);color:#fff}
-.btn.share{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--text)}
-
-/* CART BOTTOM BAR (mobile) */
-.cart-bar{position:fixed;left:16px;right:16px;bottom:20px;display:flex;gap:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);padding:12px;border-radius:12px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,.5);z-index:1300}
-.cart-bar .count{background:var(--accent2);color:#000;padding:6px 10px;border-radius:8px;font-weight:900}
-
-/* MODALS & POPUPS */
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:1400}
-.modal{background:var(--card);padding:18px;border-radius:12px;width:92%;max-width:520px;border:1px solid rgba(255,255,255,.04)}
-.modal h3{margin:0 0 8px}
-.input{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:#0e0e0f;color:var(--text)}
-.small{font-size:.9rem;color:var(--muted);margin-top:8px}
-
-/* COOKIE BAR */
+.cta.secondary{background:transparent;border:1px solid rgba(255,255,255,.06);padding:12px 20px}.flash{max-width:920px;margin:18px auto;padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);border:1px solid rgba(255,0,127,.08);display:flex;align-items:center;justify-content:space-between;gap:12px}.timer{font-weight:900;color:var(--accent2);font-size:1.3rem}.trust{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:.95rem}
+.products-grid{max-width:900px;margin:30px auto 90px;display:grid;gap:36px;padding:0 12px 40px}.product{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.03);box-shadow:0 8px 30px rgba(0,0,0,.6)}
+.video-card{background:black}.video-card iframe{width:100%;height:560px;border:0;display:block}.info{padding:16px}.info h3{margin:0;font-size:1.1rem}.price{font-weight:900;color:var(--accent2);margin-top:8px;font-size:1.25rem}.actions{margin-top:12px;display:flex;gap:10px;align-items:center}.btn{flex:1;padding:12px;border-radius:10px;border:none;cursor:pointer;font-weight:800}.btn.buy{background:linear-gradient(90deg,var(--accent),#d6006c);color:#fff}.btn.share{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--text)}
+.cart-bar{position:fixed;left:16px;right:16px;bottom:20px;display:flex;gap:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);padding:12px;border-radius:12px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,.5);z-index:1300}.cart-bar .count{background:var(--accent2);color:#000;padding:6px 10px;border-radius:8px;font-weight:900}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:1400}.modal{background:var(--card);padding:18px;border-radius:12px;width:92%;max-width:520px;border:1px solid rgba(255,255,255,.04)}
+.modal h3{margin:0 0 8px}.input{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:#0e0e0f;color:var(--text)}.small{font-size:.9rem;color:var(--muted);margin-top:8px}
 .cookie-bar{position:fixed;left:16px;right:16px;bottom:12px;background:#0b0b0c;padding:12px;border-radius:10px;display:flex;gap:12px;align-items:center;z-index:1500;border:1px solid rgba(255,255,255,.04)}
-
-/* UGC carousel (simple) */
-.ugc{display:flex;gap:10px;overflow-x:auto;padding:12px 18px}
-.ugc .card{min-width:160px;background:#0f0f10;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.03)}
-
-/* responsive */
-@media(min-width:900px){
-  .video-card iframe{height:420px}
-}
+.ugc{display:flex;gap:10px;overflow-x:auto;padding:12px 18px}.ugc .card{min-width:160px;background:#0f0f10;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.03)}
+.admin-panel{position:fixed;top:0;right:0;width:320px;height:100vh;background:#111216;color:#fff;padding:18px;overflow-y:auto;z-index:2000;display:none}
+.admin-panel h3{margin-top:0}.filter-section{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.filter-section input{width:120px}
+.admin-product{display:flex;justify-content:space-between;align-items:center;margin:6px 0;padding:6px;border:1px solid rgba(255,255,255,.1);border-radius:6px}
+@media(min-width:900px){.video-card iframe{height:420px}}
 </style>
 </head>
 <body>
-
-<!-- == HEADER == -->
 <header>
   <div class="header-inner container">
     <div class="logo">SHOPNOVA 🔥</div>
@@ -80,8 +44,6 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.6);backdrop-fi
     </div>
   </div>
 </header>
-
-<!-- == HERO == -->
 <section class="hero container" style="padding-top:140px">
   <h1 id="hero-title">Productos virales que explotan en TikTok, Reels y Shorts</h1>
   <p>Landing optimizada para conversión: videos integrados, popups inteligentes y retargeting listo para tus campañas.</p>
@@ -90,8 +52,6 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.6);backdrop-fi
     <button class="cta secondary" id="cta-sub">Recibir ofertas</button>
   </div>
 </section>
-
-<!-- == FLASH + TRUST == -->
 <div class="flash container" style="margin-top:18px">
   <div>
     <strong>🔥 Ofertas flash — hoy solo</strong>
@@ -102,8 +62,11 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.6);backdrop-fi
     <div class="trust">✅ Envío rápido · 🔒 Pago seguro · ⭐ 4.8/5 (UGC)</div>
   </div>
 </div>
-
-<!-- == UGC CAROUSEL == -->
+<section class="container filter-section">
+  <input id="filterMin" type="number" placeholder="Precio mínimo" class="input"/>
+  <input id="filterMax" type="number" placeholder="Precio máximo" class="input"/>
+  <button id="applyFilter" class="btn buy">Filtrar</button>
+</section>
 <section class="container" style="margin-top:20px">
   <div style="display:flex;align-items:center;justify-content:space-between">
     <h3 style="margin:0">Lo que dicen en TikTok</h3>
@@ -115,26 +78,18 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.6);backdrop-fi
     <div class="card">🎥 @maria - "Regalo perfecto: Smartwatch pack"</div>
   </div>
 </section>
-
-<!-- == PRODUCTS FEED == -->
 <section id="products-section" class="container">
   <div class="products-grid" id="products"></div>
 </section>
-
-<!-- CART BAR -->
 <div id="cartBar" class="cart-bar" style="display:none">
   <div style="flex:1">En el carrito: <span class="count" id="cartCount">0</span> artículos</div>
   <button class="btn buy" id="checkoutBtn">Ir a pagar</button>
 </div>
-
-<!-- COOKIE CONSENT -->
 <div id="cookieBar" class="cookie-bar" style="display:none">
   <div style="flex:1">Usamos cookies y píxeles para mejorar la experiencia y anuncios. ¿Aceptas cookies y tracking anónimo?</div>
   <button id="acceptCookies" class="btn buy">Aceptar</button>
   <button id="declineCookies" class="btn">Rechazar</button>
 </div>
-
-<!-- Email modal (capture) -->
 <div id="emailModal" class="modal-backdrop" style="display:none">
   <div class="modal" role="dialog" aria-modal="true">
     <h3>Únete a SHOPNOVA</h3>
@@ -147,8 +102,6 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.6);backdrop-fi
     <div class="small">Al unirte aceptas nuestra política de privacidad.</div>
   </div>
 </div>
-
-<!-- Exit intent popup / coupon -->
 <div id="exitModal" class="modal-backdrop" style="display:none">
   <div class="modal">
     <h3>¡Espera! 15% de descuento</h3>
@@ -159,105 +112,30 @@ header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.6);backdrop-fi
     </div>
   </div>
 </div>
-
-<!-- PIXEL SNIPPETS (PLACEHOLDERS) -->
-<!--
-  Reemplaza los IDs y activa estos scripts con tus propias keys.
-  Facebook / Meta Pixel -> REPLACE_WITH_META_ID
-  TikTok Pixel -> REPLACE_WITH_TIKTOK_ID
-  Google Ads / GA4 -> REPLACE_WITH_GA_MEASUREMENT_ID
--->
+<div id="adminPanel" class="admin-panel">
+  <h3>Panel de Administración</h3>
+  <button id="closeAdmin" style="float:right;margin-top:-30px;">Cerrar</button>
+  <hr>
+  <h4>Agregar producto</h4>
+  <input id="adminName" placeholder="Nombre" class="input"/>
+  <input id="adminPrice" placeholder="Precio" class="input"/>
+  <input id="adminImg" placeholder="URL Imagen" class="input"/>
+  <input id="adminVideo" placeholder="URL Video TikTok" class="input"/>
+  <button id="addProduct" class="btn buy">Agregar</button>
+  <hr>
+  <h4>Productos actuales</h4>
+  <div id="adminProductList"></div>
+</div>
+<button id="openAdmin" style="position:fixed;bottom:20px;right:20px;padding:12px 18px;background:#ff007f;color:#fff;border:none;border-radius:8px;z-index:2100;">ADMIN</button>
 <script>
-/* ====== PIXEL PLACEHOLDERS - AGREGAR IDS REALES ====== */
-/* Meta Pixel placeholder (descomenta y reemplaza ID para activar)
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'REPLACE_WITH_META_ID');
-fbq('track', 'PageView');
-*/
-
-/* TikTok Pixel placeholder
-!function (w, d, t) {
-  w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
-  ttq.methods = ["page", "track", "identify"]; ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
-  for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-  var s = d.createElement("script"); s.async = !0; s.src = "https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=REPLACE_WITH_TIKTOK_ID"; 
-  var e = d.getElementsByTagName("script")[0]; e.parentNode.insertBefore(s, e);
-}(window, document, 'ttq');
-ttq.page();
-*/
-
-/* Google Analytics / GA4 placeholder
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config','REPLACE_WITH_GA_MEASUREMENT_ID');
-*/
-</script>
-
-<script>
-/* ===================== LOGICA PRINCIPAL ===================== */
-
-/* A/B Headline simple: guarda variante en localStorage */
-(function abTest(){
-  const key='shopnova_ab';
-  let v=localStorage.getItem(key);
-  if(!v){
-    v = Math.random() < 0.5 ? 'A' : 'B';
-    localStorage.setItem(key,v);
-  }
-  if(v==='B'){
-    document.getElementById('hero-title').textContent = 'Ofertas virales: productos que arrasan en TikTok & Reels';
-  }
-})();
-
-/* Ofertas flash timer -> hasta medianoche */
-(function initTimer(){
-  const el=document.getElementById('counter');
-  function update(){
-    const now=new Date();
-    const end=new Date(); end.setHours(23,59,59,999);
-    const diff=end-now;
-    if(diff<=0){ el.textContent='00h 00m 00s'; return; }
-    const h=Math.floor(diff/(1000*60*60));
-    const m=Math.floor((diff%(1000*60*60))/(1000*60));
-    const s=Math.floor((diff%(1000*60))/1000);
-    el.textContent = `${String(h).padStart(2,'0')}h ${String(m).padStart(2,'0')}m ${String(s).padStart(2,'0')}s`;
-  }
-  update(); setInterval(update,1000);
-})();
-
-/* Datos de productos (20) */
-const productos=[
+let productos=[
   {id:1,name:"Mini Aspiradora USB",price:"19,99€",img:"https://picsum.photos/id/1015/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232654"},
   {id:2,name:"Moldes Cubitos Esféricos",price:"12,99€",img:"https://picsum.photos/id/1016/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232655"},
-  {id:3,name:"Encendedor Plasma USB",price:"24,99€",img:"https://picsum.photos/id/1018/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232656"},
-  {id:4,name:"Botella Aislante Stanley",price:"29,99€",img:"https://picsum.photos/id/1020/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232657"},
-  {id:5,name:"Bolígrafo Inteligente AI",price:"59,99€",img:"https://picsum.photos/id/1022/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232658"},
-  {id:6,name:"Power Bank 10k mAh",price:"21,99€",img:"https://picsum.photos/id/1024/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232659"},
-  {id:7,name:"Power Bank 25k 100W",price:"56,99€",img:"https://picsum.photos/id/1025/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232660"},
-  {id:8,name:"Power Bank 27k 140W",price:"89,99€",img:"https://picsum.photos/id/1026/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232661"},
-  {id:9,name:"Herramienta Fidget N-Power",price:"48,95€",img:"https://picsum.photos/id/1027/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232662"},
-  {id:10,name:"Multi-herramienta 23 en 1",price:"25,88€",img:"https://picsum.photos/id/1028/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232663"},
-  {id:11,name:"Smartwatch Pack 3",price:"73,37€",img:"https://picsum.photos/id/1029/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232664"},
-  {id:12,name:"Auriculares Sony WH-1000XM5",price:"349€",img:"https://picsum.photos/id/1030/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232665"},
-  {id:13,name:"MacBook Air M3 13''",price:"1299€",img:"https://picsum.photos/id/1031/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232666"},
-  {id:14,name:"iPhone 15 Pro 256GB",price:"1259€",img:"https://picsum.photos/id/1032/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232667"},
-  {id:15,name:"Gafas VR NextGen",price:"199,99€",img:"https://picsum.photos/id/1033/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232668"},
-  {id:16,name:"Mini Proyector LED",price:"89,99€",img:"https://picsum.photos/id/1034/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232669"},
-  {id:17,name:"Lámpara LED Inteligente",price:"34,99€",img:"https://picsum.photos/id/1035/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232670"},
-  {id:18,name:"Cámara Deportiva 4K",price:"79,99€",img:"https://picsum.photos/id/1036/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232671"},
-  {id:19,name:"Soporte Smartphone Flexible",price:"14,99€",img:"https://picsum.photos/id/1037/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232672"},
-  {id:20,name:"Altavoz Bluetooth Portátil",price:"39,99€",img:"https://picsum.photos/id/1038/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232673"}
+  {id:3,name:"Encendedor Plasma USB",price:"24,99€",img:"https://picsum.photos/id/1018/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232656"}
 ];
-
-/* Render products */
 const productsEl=document.getElementById('products');
 function renderProducts(list){
-  productsEl.innerHTML = list.map(p=>`
+  productsEl.innerHTML=list.map(p=>`
     <article class="product" data-id="${p.id}">
       <div class="video-card" aria-hidden="true">
         <iframe src="${p.video}" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -268,177 +146,47 @@ function renderProducts(list){
         <div class="actions">
           <button class="btn buy btn-buy" data-id="${p.id}">Comprar</button>
           <button class="btn share" data-id="${p.id}">Compartir</button>
+          <button class="btn" data-id="${p.id}" onclick="editProduct(${p.id})">Editar</button>
+          <button class="btn" data-id="${p.id}" onclick="deleteProduct(${p.id})">Eliminar</button>
         </div>
-        <div class="small" style="margin-top:8px;color:var(--muted)">Envío gratis a partir de 49€ · 30 días devolución</div>
+        <div class="small" style="margin-top:8px;color:var(--muted)">Envío gratis · 30 días devolución</div>
       </div>
-    </article>
-  `).join('');
+    </article>`).join('');
+  renderAdminList();
 }
 renderProducts(productos);
-
-/* Lazy-play logic: play iframe of visible product by setting src only when visible (reduces network) */
-function initLazyPlay(){
-  const nodes = document.querySelectorAll('.product');
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      const iframe = en.target.querySelector('iframe');
-      if(en.isIntersecting){
-        // ensure src exists (some embeds require src to be set)
-        if(!iframe.dataset.loaded){
-          iframe.dataset.loaded = '1';
-          // keep src already set in products data -> but if you want lazy load, you can use data-src
-        }
-      }
-    });
-  },{threshold:0.5});
-  nodes.forEach(n=>io.observe(n));
+/* ADMIN FUNCTIONS */
+function renderAdminList(){
+  const adminList=document.getElementById('adminProductList');
+  adminList.innerHTML=productos.map(p=>`<div class="admin-product">${p.name} - ${p.price} <button onclick="editProduct(${p.id})">Editar</button> <button onclick="deleteProduct(${p.id})">Eliminar</button></div>`).join('');
 }
-initLazyPlay();
-
-/* CART (simple localStorage) */
-const cartKey='shopnova_cart';
-function getCart(){ return JSON.parse(localStorage.getItem(cartKey)||'[]'); }
-function setCart(c){ localStorage.setItem(cartKey,JSON.stringify(c)); updateCartUI(); }
-function addToCart(id){
-  const p = productos.find(x=>x.id===+id);
-  if(!p) return;
-  const c = getCart();
-  c.push(p);
-  setCart(c);
-  // Trigger pixel purchase-intent / add_to_cart
-  triggerPixelEvent('AddToCart', {id:p.id, name:p.name, price:p.price});
+function addProduct(){
+  const name=document.getElementById('adminName').value;
+  const price=document.getElementById('adminPrice').value;
+  const img=document.getElementById('adminImg').value;
+  const video=document.getElementById('adminVideo').value;
+  if(!name||!price){alert('Nombre y precio son obligatorios'); return;}
+  const id=productos.length?productos[productos.length-1].id+1:1;
+  productos.push({id,name,price,img,video,link:'#'});
+  renderProducts(productos);
 }
-function updateCartUI(){
-  const c = getCart();
-  const bar=document.getElementById('cartBar');
-  const count=document.getElementById('cartCount');
-  if(c.length>0){ bar.style.display='flex'; count.textContent = c.length; }
-  else bar.style.display='none';
+function editProduct(id){
+  const p=productos.find(x=>x.id===id);
+  const newName=prompt('Editar nombre',p.name);
+  const newPrice=prompt('Editar precio',p.price);
+  if(newName) p.name=newName;
+  if(newPrice) p.price=newPrice;
+  renderProducts(productos);
 }
-document.addEventListener('click',e=>{
-  if(e.target.matches('.btn-buy, .btn-buy *') || e.target.closest('.btn-buy')){
-    const btn = e.target.closest('.btn-buy');
-    addToCart(btn.dataset.id);
-    // show quick UGC share prompt
-    showToast('Añadido al carrito ✅');
+function deleteProduct(id){
+  if(confirm('Eliminar producto?')){
+    productos=productos.filter(x=>x.id!==id);
+    renderProducts(productos);
   }
-  if(e.target.matches('.btn.share, .btn.share *') || e.target.closest('.btn.share')){
-    const btn = e.target.closest('.btn.share');
-    const p = productos.find(x=>x.id==btn.dataset.id);
-    // share via navigator.share if available
-    if(navigator.share){
-      navigator.share({title:p.name,text:`Mira esto: ${p.name}`,url:location.href});
-    } else {
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}`,'_blank');
-    }
-  }
-});
-
-/* Checkout (mock) */
-document.getElementById('checkoutBtn').addEventListener('click',()=>{
-  const cart=getCart();
-  if(cart.length===0){ alert('Carrito vacío'); return; }
-  // Simulate purchase
-  // Trigger purchase pixel (example payload)
-  triggerPixelEvent('Purchase', {value: cart.reduce((s,c)=>s+parseFloat(c.price.replace('€','')),0), items:cart.length});
-  localStorage.removeItem(cartKey);
-  updateCartUI();
-  showToast('Compra simulada ✅ - píxeles disparados');
-});
-
-/* Simple toast */
-function showToast(msg){
-  const el=document.createElement('div');
-  el.style.position='fixed'; el.style.left='50%'; el.style.transform='translateX(-50%)';
-  el.style.bottom='96px'; el.style.background='#0f0f10'; el.style.padding='10px 14px';
-  el.style.borderRadius='10px'; el.style.zIndex=2000; el.textContent=msg; document.body.appendChild(el);
-  setTimeout(()=>el.remove(),2200);
 }
-
-/* POPUPS: email capture and exit-intent with frequency control */
-const emailModal=document.getElementById('emailModal');
-const exitModal=document.getElementById('exitModal');
-const cookieBar=document.getElementById('cookieBar');
-
-function showEmailModal(){
-  if(localStorage.getItem('shopnova_email_shown')) return;
-  emailModal.style.display='flex';
-  localStorage.setItem('shopnova_email_shown','1');
-}
-function closeEmailModal(){ emailModal.style.display='none'; }
-
-document.getElementById('cta-sub').addEventListener('click',showEmailModal);
-document.getElementById('closeEmail').addEventListener('click',closeEmailModal);
-document.getElementById('saveEmail').addEventListener('click',()=>{
-  const val=document.getElementById('emailInput').value;
-  if(!val||!val.includes('@')){ alert('Introduce un email válido'); return; }
-  // send to your newsletter API here
-  localStorage.setItem('shopnova_email',val);
-  closeEmailModal();
-  showToast('Email guardado ✅ - Te enviamos 10%');
-});
-
-/* Exit intent detection (desktop) */
-let exitShown = localStorage.getItem('shopnova_exit_shown');
-document.addEventListener('mouseout', e=>{
-  if(e.clientY < 10 && !exitShown){
-    exitShown = true;
-    localStorage.setItem('shopnova_exit_shown','1');
-    exitModal.style.display='flex';
-  }
-});
-document.getElementById('closeExit').addEventListener('click',()=>exitModal.style.display='none');
-document.getElementById('claimExit').addEventListener('click',()=>{
-  // apply coupon code flow
-  exitModal.style.display='none';
-  showToast('Cupón VIRAL15 aplicado ✅');
-});
-
-/* Cookie banner logic */
-if(!localStorage.getItem('shopnova_cookie')){
-  cookieBar.style.display='flex';
-}
-document.getElementById('acceptCookies').addEventListener('click',()=>{
-  localStorage.setItem('shopnova_cookie','1');
-  cookieBar.style.display='none';
-  showToast('Cookies aceptadas - píxeles activados');
-  // here you would initialize pixels (FB/TikTok/GA) after consent
-});
-document.getElementById('declineCookies').addEventListener('click',()=>{
-  localStorage.setItem('shopnova_cookie','0');
-  cookieBar.style.display='none';
-  showToast('Cookies rechazadas - no se activan píxeles');
-});
-
-/* Simple search filter */
-document.getElementById('search').addEventListener('input',e=>{
-  const term=e.target.value.toLowerCase();
-  const filtered = productos.filter(p=>p.name.toLowerCase().includes(term));
-  renderProducts(filtered);
-  initLazyPlay();
-});
-
-/* Lazy play re-init helper after re-render */
-function initLazyPlay(){ /* kept intentionally light for demo */ }
-
-/* Exit: show email modal after X seconds for new visitors */
-setTimeout(()=>{ if(!localStorage.getItem('shopnova_email_shown')) showEmailModal(); },12000);
-
-/* Pixel event trigger helper (replace internals with real pixel calls) */
-function triggerPixelEvent(event, payload){
-  console.log('PIXEL EVENT',event,payload);
-  // Example: fbq('track', event, payload);
-  // Example: ttq.track(event, payload)
-  // Example: gtag('event', event, payload)
-}
-
-/* Initial UI update */
-updateCartUI();
-
-/* Accessibility: focus trap for modals (light) */
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){ emailModal.style.display='none'; exitModal.style.display='none'; }
-});
+document.getElementById('addProduct').addEventListener('click',addProduct);
+document.getElementById('openAdmin').addEventListener('click',()=>document.getElementById('adminPanel').style.display='block');
+document.getElementById('closeAdmin').addEventListener('click',()=>document.getElementById('adminPanel').style.display='none');
 </script>
 </body>
 </html>
