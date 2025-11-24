@@ -1,192 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>SHOPNOVA PRO - Tienda Viva</title>
-<meta name="description" content="SHOPNOVA PRO - Tienda viral estilo Amazon, con administración, feed dinámico y retargeting listo." />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#050505;--card:#111216;--accent:#ff007f;--accent2:#ffae00;--neon:#00eaff;--text:#fff;--muted:#9aa0a6;--maxw:1200px;}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 18px}
-header{position:fixed;top:0;left:0;right:0;background:rgba(6,6,6,.8);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,0,127,.08);z-index:1200}
-.header-inner{display:flex;align-items:center;gap:18px;max-width:var(--maxw);margin:0 auto;padding:12px 18px}
-.logo{font-weight:900;color:var(--accent);font-size:1.3rem;letter-spacing:.6px}
-.search{margin-left:auto;max-width:420px;width:100%}
-#search{width:100%;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.04);background:#0f0f10;color:var(--text)}
-.hero{padding:120px 0 40px;text-align:center;position:relative}
-.hero h1{font-size:2.6rem;margin:0;line-height:1.02;font-weight:900;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);margin:12px auto 20px;max-width:760px}
-.cta{background:var(--accent);border:none;padding:14px 28px;border-radius:999px;color:#fff;font-weight:800;cursor:pointer;box-shadow:0 6px 30px rgba(255,0,127,.12)}
-.cta.secondary{background:transparent;border:1px solid rgba(255,255,255,.06);padding:12px 20px}.flash{max-width:920px;margin:18px auto;padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);border:1px solid rgba(255,0,127,.08);display:flex;align-items:center;justify-content:space-between;gap:12px}.timer{font-weight:900;color:var(--accent2);font-size:1.3rem}.trust{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:.95rem}
-.products-grid{max-width:900px;margin:30px auto 90px;display:grid;gap:36px;padding:0 12px 40px}.product{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.03);box-shadow:0 8px 30px rgba(0,0,0,.6)}
-.video-card{background:black}.video-card iframe{width:100%;height:560px;border:0;display:block}.info{padding:16px}.info h3{margin:0;font-size:1.1rem}.price{font-weight:900;color:var(--accent2);margin-top:8px;font-size:1.25rem}.actions{margin-top:12px;display:flex;gap:10px;align-items:center}.btn{flex:1;padding:12px;border-radius:10px;border:none;cursor:pointer;font-weight:800}.btn.buy{background:linear-gradient(90deg,var(--accent),#d6006c);color:#fff}.btn.share{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--text)}
-.cart-bar{position:fixed;left:16px;right:16px;bottom:20px;display:flex;gap:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);padding:12px;border-radius:12px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,.5);z-index:1300}.cart-bar .count{background:var(--accent2);color:#000;padding:6px 10px;border-radius:8px;font-weight:900}
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:1400}.modal{background:var(--card);padding:18px;border-radius:12px;width:92%;max-width:520px;border:1px solid rgba(255,255,255,.04)}
-.modal h3{margin:0 0 8px}.input{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:#0e0e0f;color:var(--text)}.small{font-size:.9rem;color:var(--muted);margin-top:8px}
-.cookie-bar{position:fixed;left:16px;right:16px;bottom:12px;background:#0b0b0c;padding:12px;border-radius:10px;display:flex;gap:12px;align-items:center;z-index:1500;border:1px solid rgba(255,255,255,.04)}
-.ugc{display:flex;gap:10px;overflow-x:auto;padding:12px 18px}.ugc .card{min-width:160px;background:#0f0f10;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.03)}
-.admin-panel{position:fixed;top:0;right:0;width:320px;height:100vh;background:#111216;color:#fff;padding:18px;overflow-y:auto;z-index:2000;display:none}
-.admin-panel h3{margin-top:0}.filter-section{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-.filter-section input{width:120px}
-.admin-product{display:flex;justify-content:space-between;align-items:center;margin:6px 0;padding:6px;border:1px solid rgba(255,255,255,.1);border-radius:6px}
-@media(min-width:900px){.video-card iframe{height:420px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SHOPNOVA PRO — Landing Profesional con Full-Stack Tracking</title>
+  <meta name="description" content="SHOPNOVA PRO — Landing optimizada con Meta Pixel + CAPI, TikTok Pixel + Server Events, GA4, consent manager y eventos e-commerce." />
+  <meta name="theme-color" content="#050505">
+
+  <!-- iOS Smart App Banner (reemplaza YOUR_IOS_APP_ID si aplica) -->
+  <meta name="apple-itunes-app" content="app-id=YOUR_IOS_APP_ID, app-argument=shopnova://open" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- GOOGLE ANALYTICS 4 - Reemplaza GA_MEASUREMENT_ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // NO enviar page_view automático: lo haremos después del consentimiento
+    gtag('config', 'GA_MEASUREMENT_ID', { 'send_page_view': false });
+  </script>
+
+  <!--
+    Meta Pixel (client) y TikTok Pixel están incluidos en el HTML pero marcados con type="text/plain"
+    para que no se ejecuten hasta que el usuario acepte (gestión de consentimiento).
+    Reemplaza META_PIXEL_ID y TIKTOK_PIXEL_ID.
+  -->
+  <script id="meta-pixel" type="text/plain" data-cookiecategory="marketing">
+  !(function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})(window, document,'script');
+    fbq('init', 'META_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+
+  <script id="tiktok-pixel" type="text/plain" data-cookiecategory="marketing">
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject = t;
+      var ttq = w[t] = w[t] || [];
+      ttq.methods = ['page', 'track', 'identify', 'instances', 'debug', 'on', 'off', 'once', 'ready', 'alias', 'group', 'enableCookie', 'disableCookie'];
+      ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+      for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+      ttq.instance = function (t) { var e = ttq._i[t] || []; return { load: function (i, r) { ttq.load(i, r, t) }, page: function () { ttq.page.apply(ttq, arguments) }, track: function () { ttq.track.apply(ttq, arguments) }, identify: function () { ttq.identify.apply(ttq, arguments) } } };
+      ttq.load = function (e, r, o) {
+        var i = 'https://analytics.tiktok.com/i18n/pixel/events.js';
+        ttq._i = ttq._i || {}, ttq._i[o] = [];
+        ttq._i[o]._u = i;
+        ttq._t = ttq._t || {}, ttq._t[e] = +new Date;
+        ttq._o = ttq._o || {}, ttq._o[e] = r || {};
+        var a = d.createElement('script');
+        a.type = 'text/javascript';
+        a.async = !0;
+        a.src = i + '?sdkid=' + e + '&lib=' + t;
+        var s = d.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(a, s)
+      };
+      ttq.load('TIKTOK_PIXEL_ID');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+
+  <style>
+    :root{--bg:#050505;--card:#0f1112;--accent:#ff007f;--accent2:#ffae00;--text:#eef2f4;--muted:#9aa0a6}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#050505,#070708);color:var(--text);-webkit-font-smoothing:antialiased}
+    .container{max-width:1200px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;gap:12px;padding:12px 0}
+    .logo{font-weight:900;color:var(--accent)}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.03)}
+    .btn{padding:10px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#000}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--text)}
+    .consent-bar{position:fixed;left:12px;right:12px;bottom:12px;background:#0b0b0c;padding:14px;border-radius:10px;display:flex;gap:12px;align-items:center;z-index:99999;border:1px solid rgba(255,255,255,.04)}
+    #eventsLog{background:#0b0b0c;padding:12px;border-radius:8px;max-height:220px;overflow:auto;margin-top:8px}
+    footer{margin-top:28px;color:var(--muted);font-size:.9rem}
+    pre{white-space:pre-wrap;word-break:break-word;margin:0}
+  </style>
 </head>
 <body>
-<header>
-  <div class="header-inner container">
-    <div class="logo">SHOPNOVA 🔥</div>
-    <div class="search">
-      <input id="search" placeholder="Buscar productos..." />
+  <header class="container">
+    <div class="logo">SHOPNOVA PRO 🔥</div>
+    <nav style="margin-left:18px">
+      <a href="#products" style="color:var(--muted);text-decoration:none;margin-right:12px">Productos</a>
+      <a href="#faq" style="color:var(--muted);text-decoration:none">FAQ</a>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <h1>SHOPNOVA PRO — Landing con Full-Stack Tracking</h1>
+    <p class="small">Archivo listo para copiar. Reemplaza IDs y el endpoint server-side para Conversion API / Server Events.</p>
+
+    <section id="products" aria-labelledby="products-title">
+      <h2 id="products-title">Productos seleccionados</h2>
+      <div class="products-grid" id="productsGrid">
+        <article class="card" data-id="1" data-name="Mini Aspiradora USB" data-price="19.99">
+          <h3>Mini Aspiradora USB</h3>
+          <div class="small">19.99 €</div>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <button class="btn btn-primary btn-add" data-id="1" data-name="Mini Aspiradora USB" data-price="19.99">Añadir al carrito</button>
+            <button class="btn btn-ghost btn-buy-now" data-id="1" data-name="Mini Aspiradora USB" data-price="19.99">Comprar ahora</button>
+          </div>
+        </article>
+
+        <article class="card" data-id="2" data-name="Moldes Cubitos Esféricos" data-price="12.99">
+          <h3>Moldes Cubitos Esféricos</h3>
+          <div class="small">12.99 €</div>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <button class="btn btn-primary btn-add" data-id="2" data-name="Moldes Cubitos Esféricos" data-price="12.99">Añadir al carrito</button>
+            <button class="btn btn-ghost btn-buy-now" data-id="2" data-name="Moldes Cubitos Esféricos" data-price="12.99">Comprar ahora</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top:20px">
+      <h2>Eventos enviados (demo)</h2>
+      <div id="eventsLog" aria-live="polite"></div>
+    </section>
+
+    <section id="faq" style="margin-top:18px">
+      <h2>FAQ</h2>
+      <details><summary>¿Qué hace el endpoint /api/track?</summary><div class="small">Debe recibir eventos del cliente, enriquecer y reenviar a Meta Conversions API, TikTok Server Events y/o GA4 Measurement Protocol. Implementar validación y secretos en servidor.</div></details>
+      <details><summary>¿Por qué scripts con type="text/plain"?</summary><div class="small">Así evitamos ejecutar pixels antes del consentimiento del usuario (mejor cumplimiento RGPD/CPRA).</div></details>
+    </section>
+
+    <footer>
+      <div>© SHOPNOVA PRO — Reemplaza los IDs antes de producción</div>
+    </footer>
+  </main>
+
+  <!-- Consent bar (CMP simple) -->
+  <div id="consentBar" class="consent-bar" role="dialog" aria-live="polite" style="display:flex">
+    <div style="flex:1">
+      <strong>Usamos cookies y píxeles</strong>
+      <div class="small">Acepta para activar analítica y anuncios (Meta, TikTok, GA4). Puedes rechazar si quieres privacidad.</div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button id="acceptAll" class="btn btn-primary">Aceptar todo</button>
+      <button id="rejectNonEssential" class="btn btn-ghost">Rechazar</button>
     </div>
   </div>
-</header>
-<section class="hero container" style="padding-top:140px">
-  <h1 id="hero-title">Productos virales que explotan en TikTok, Reels y Shorts</h1>
-  <p>Landing optimizada para conversión: videos integrados, popups inteligentes y retargeting listo para tus campañas.</p>
-  <div style="display:flex;gap:12px;justify-content:center;margin-top:14px">
-    <button class="cta" id="cta-see">Ver productos</button>
-    <button class="cta secondary" id="cta-sub">Recibir ofertas</button>
-  </div>
-</section>
-<div class="flash container" style="margin-top:18px">
-  <div>
-    <strong>🔥 Ofertas flash — hoy solo</strong>
-    <div class="small">Descuentos exclusivos para visitantes desde TikTok/IG</div>
-  </div>
-  <div style="display:flex;align-items:center;gap:18px">
-    <div class="timer" id="counter">00h 00m 00s</div>
-    <div class="trust">✅ Envío rápido · 🔒 Pago seguro · ⭐ 4.8/5 (UGC)</div>
-  </div>
-</div>
-<section class="container filter-section">
-  <input id="filterMin" type="number" placeholder="Precio mínimo" class="input"/>
-  <input id="filterMax" type="number" placeholder="Precio máximo" class="input"/>
-  <button id="applyFilter" class="btn buy">Filtrar</button>
-</section>
-<section class="container" style="margin-top:20px">
-  <div style="display:flex;align-items:center;justify-content:space-between">
-    <h3 style="margin:0">Lo que dicen en TikTok</h3>
-    <small style="color:var(--muted)">#ShopNovaViral</small>
-  </div>
-  <div class="ugc" style="margin-top:12px" id="ugc">
-    <div class="card">🎥 @ana - "No puedo vivir sin mi power bank!"</div>
-    <div class="card">🎥 @luis - "Mini aspiradora = milagro para mi teclado"</div>
-    <div class="card">🎥 @maria - "Regalo perfecto: Smartwatch pack"</div>
-  </div>
-</section>
-<section id="products-section" class="container">
-  <div class="products-grid" id="products"></div>
-</section>
-<div id="cartBar" class="cart-bar" style="display:none">
-  <div style="flex:1">En el carrito: <span class="count" id="cartCount">0</span> artículos</div>
-  <button class="btn buy" id="checkoutBtn">Ir a pagar</button>
-</div>
-<div id="cookieBar" class="cookie-bar" style="display:none">
-  <div style="flex:1">Usamos cookies y píxeles para mejorar la experiencia y anuncios. ¿Aceptas cookies y tracking anónimo?</div>
-  <button id="acceptCookies" class="btn buy">Aceptar</button>
-  <button id="declineCookies" class="btn">Rechazar</button>
-</div>
-<div id="emailModal" class="modal-backdrop" style="display:none">
-  <div class="modal" role="dialog" aria-modal="true">
-    <h3>Únete a SHOPNOVA</h3>
-    <p class="small">Recibe 10% de descuento + ofertas exclusivas.</p>
-    <input id="emailInput" class="input" placeholder="Tu email" />
+
+  <!-- Admin panel (colapsable) -->
+  <aside id="adminPanel" style="position:fixed;top:80px;right:16px;width:340px;height:calc(100vh-160px);background:#0c0c0d;padding:14px;border-radius:10px;display:none;z-index:9999;border:1px solid rgba(255,255,255,.03);overflow:auto">
+    <h4 style="margin-top:0">Panel Admin</h4>
+    <label class="small">Nombre<br><input id="adminName" style="width:100%;padding:8px;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,.03)"></label>
+    <label class="small" style="margin-top:8px">Precio<br><input id="adminPrice" style="width:100%;padding:8px;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,.03)"></label>
     <div style="display:flex;gap:8px;margin-top:10px">
-      <button id="saveEmail" class="btn buy" style="flex:1">Quiero el 10%</button>
-      <button id="closeEmail" class="btn">Cerrar</button>
+      <button id="addProduct" class="btn btn-primary" style="flex:1">Agregar</button>
+      <button id="closeAdmin" class="btn btn-ghost">Cerrar</button>
     </div>
-    <div class="small">Al unirte aceptas nuestra política de privacidad.</div>
-  </div>
-</div>
-<div id="exitModal" class="modal-backdrop" style="display:none">
-  <div class="modal">
-    <h3>¡Espera! 15% de descuento</h3>
-    <p class="small">Antes de irte: usa el código <strong>VIRAL15</strong> en tu compra (válido 30 min).</p>
-    <div style="display:flex;gap:8px;margin-top:12px">
-      <button id="claimExit" class="btn buy" style="flex:1">Usar cupón</button>
-      <button id="closeExit" class="btn">No ahora</button>
-    </div>
-  </div>
-</div>
-<div id="adminPanel" class="admin-panel">
-  <h3>Panel de Administración</h3>
-  <button id="closeAdmin" style="float:right;margin-top:-30px;">Cerrar</button>
-  <hr>
-  <h4>Agregar producto</h4>
-  <input id="adminName" placeholder="Nombre" class="input"/>
-  <input id="adminPrice" placeholder="Precio" class="input"/>
-  <input id="adminImg" placeholder="URL Imagen" class="input"/>
-  <input id="adminVideo" placeholder="URL Video TikTok" class="input"/>
-  <button id="addProduct" class="btn buy">Agregar</button>
-  <hr>
-  <h4>Productos actuales</h4>
-  <div id="adminProductList"></div>
-</div>
-<button id="openAdmin" style="position:fixed;bottom:20px;right:20px;padding:12px 18px;background:#ff007f;color:#fff;border:none;border-radius:8px;z-index:2100;">ADMIN</button>
-<script>
-let productos=[
-  {id:1,name:"Mini Aspiradora USB",price:"19,99€",img:"https://picsum.photos/id/1015/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232654"},
-  {id:2,name:"Moldes Cubitos Esféricos",price:"12,99€",img:"https://picsum.photos/id/1016/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232655"},
-  {id:3,name:"Encendedor Plasma USB",price:"24,99€",img:"https://picsum.photos/id/1018/900/600",link:"#",video:"https://www.tiktok.com/embed/7045647304561232656"}
-];
-const productsEl=document.getElementById('products');
-function renderProducts(list){
-  productsEl.innerHTML=list.map(p=>`
-    <article class="product" data-id="${p.id}">
-      <div class="video-card" aria-hidden="true">
-        <iframe src="${p.video}" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
-      <div class="info">
-        <h3>${p.name}</h3>
-        <div class="price">${p.price}</div>
-        <div class="actions">
-          <button class="btn buy btn-buy" data-id="${p.id}">Comprar</button>
-          <button class="btn share" data-id="${p.id}">Compartir</button>
-          <button class="btn" data-id="${p.id}" onclick="editProduct(${p.id})">Editar</button>
-          <button class="btn" data-id="${p.id}" onclick="deleteProduct(${p.id})">Eliminar</button>
-        </div>
-        <div class="small" style="margin-top:8px;color:var(--muted)">Envío gratis · 30 días devolución</div>
-      </div>
-    </article>`).join('');
-  renderAdminList();
-}
-renderProducts(productos);
-/* ADMIN FUNCTIONS */
-function renderAdminList(){
-  const adminList=document.getElementById('adminProductList');
-  adminList.innerHTML=productos.map(p=>`<div class="admin-product">${p.name} - ${p.price} <button onclick="editProduct(${p.id})">Editar</button> <button onclick="deleteProduct(${p.id})">Eliminar</button></div>`).join('');
-}
-function addProduct(){
-  const name=document.getElementById('adminName').value;
-  const price=document.getElementById('adminPrice').value;
-  const img=document.getElementById('adminImg').value;
-  const video=document.getElementById('adminVideo').value;
-  if(!name||!price){alert('Nombre y precio son obligatorios'); return;}
-  const id=productos.length?productos[productos.length-1].id+1:1;
-  productos.push({id,name,price,img,video,link:'#'});
-  renderProducts(productos);
-}
-function editProduct(id){
-  const p=productos.find(x=>x.id===id);
-  const newName=prompt('Editar nombre',p.name);
-  const newPrice=prompt('Editar precio',p.price);
-  if(newName) p.name=newName;
-  if(newPrice) p.price=newPrice;
-  renderProducts(productos);
-}
-function deleteProduct(id){
-  if(confirm('Eliminar producto?')){
-    productos=productos.filter(x=>x.id!==id);
-    renderProducts(productos);
-  }
-}
-document.getElementById('addProduct').addEventListener('click',addProduct);
-document.getElementById('openAdmin').addEventListener('click',()=>document.getElementById('adminPanel').style.display='block');
-document.getElementById('closeAdmin').addEventListener('click',()=>document.getElementById('adminPanel').style.display='none');
-</script>
+    <div id="adminProductList" style="margin-top:12px"></div>
+  </aside>
+  <button id="openAdmin" style="position:fixed;bottom:20px;right:20px;padding:10px 14px;background:var(--accent);color:#000;border:none;border-radius:8px;z-index:9999">ADMIN</button>
+
+  <script>
+    // CONFIG - Reemplaza valores
+    const CONFIG = {
+      metaPixelId: 'META_PIXEL_ID',
+      tiktokPixelId: 'TIKTOK_PIXEL_ID',
+      gaMeasurementId: 'GA_MEASUREMENT_ID',
+      serverEndpoint: '/api/track' // tu endpoint server-side
+    };
+
+    // --- Consent handling ---
+    function setConsent(decision){
+      localStorage.setItem('sn_consent', decision);
+      applyConsent(decision);
+    }
+
+    function applyConsent(decision){
+      // Solo ejecutar scripts si el usuario acepta "marketing"
+      if(decision === 'accepted'){
+        // Ejecutar Meta pixel script (contenido del script con id=meta-pixel)
+        const metaScript = document.getElementById('meta-pixel');
+        if(metaScript && metaScript.textContent.trim()){
+          try{ (new Function(metaScript.textContent.replace('META_PIXEL_ID', CONFIG.metaPixelId)))(); }catch(e){ console.warn('Meta pixel load error', e); }
+        }
+        // Ejecutar TikTok pixel
+        const tt = document.getElementById('tiktok-pixel');
+        if(tt && tt.textContent.trim()){
+          try{ (new Function(tt.textContent.replace('TIKTOK_PIXEL_ID', CONFIG.tiktokPixelId)))(); }catch(e){ console.warn('TikTok pixel load error', e); }
+        }
+        // Enviar page_view manual a GA4 si gtag disponible
+        if(window.gtag){ gtag('event','page_view',{ 'send_to': CONFIG.gaMeasurementId }); }
+      } else {
+        console.log('Marketing tracking disabled by user');
+      }
+      // Ocultar barra de consentimiento
+      document.getElementById('consentBar').style.display = 'none';
+    }
+
+    // Inicializar CMP desde decisión previa si existe
+    const prior = localStorage.getItem('sn_consent');
+    if(prior){ applyConsent(prior); } else { document.getElementById('consentBar').style.display = 'flex'; }
+
+    document.getElementById('acceptAll').addEventListener('click', ()=> setConsent('accepted'));
+    document.getElementById('rejectNonEssential').addEventListener('click', ()=> setConsent('rejected'));
+
+    // --- Event tracking (cliente + envío a servidor) ---
+    async function trackEvent(eventName, payload = {}){
+      // 1) Pixels cliente
+      try{ if(window.fbq) fbq('track', eventName, payload); }catch(e){ console.warn('fbq error', e); }
+      try{ if(window.ttq && typeof window.ttq.track === 'function') window.ttq.track(eventName, payload); }catch(e){ console.warn('ttq error', e); }
+      try{ if(window.gtag) gtag('event', eventName, payload); }catch(e){ console.warn('gtag error', e); }
+
+      // 2) Enviar al servidor para CAPI / Server Events (implementa seguridad / validación en el servidor)
+      try{
+        await fetch(CONFIG.serverEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({ event: eventName, payload: payload, page: location.pathname, ts: Date.now() })
+        });
+      }catch(e){ console.warn('server track error', e); }
+
+      // 3) Mostrar en UI (demo)
+      logEvent(eventName, payload);
+    }
+
+    function logEvent(ev, payload){
+      const el = document.getElementById('eventsLog');
+      const p = document.createElement('div');
+      p.style.borderBottom = '1px dashed rgba(255,255,255,.03)';
+      p.style.padding = '6px 0';
+      p.innerHTML = '<strong>'+escapeHtml(ev)+'</strong><pre>'+escapeHtml(JSON.stringify(payload))+'</pre>';
+      el.prepend(p);
+    }
+
+    function escapeHtml(str){ return (''+str).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[c]); }
+
+    // Enlazar botones de producto
+    document.querySelectorAll('.btn-add').forEach(btn => {
+      btn.addEventListener('click', e => {
+        const id = e.currentTarget.dataset.id;
+        const name = e.currentTarget.dataset.name;
+        const price = parseFloat(e.currentTarget.dataset.price);
+        const payload = { content_ids: [id], content_name: name, currency: 'EUR', value: price };
+        trackEvent('AddToCart', payload);
+        showToast('Añadido al carrito: ' + name);
+      });
+    });
+
+    document.querySelectorAll('.btn-buy-now').forEach(btn => {
+      btn.addEventListener('click', async e => {
+        const id = e.currentTarget.dataset.id;
+        const name = e.currentTarget.dataset.name;
+        const price = parseFloat(e.currentTarget.dataset.price);
+        const payload = { content_ids: [id], content_name: name, currency: 'EUR', value: price, quantity: 1 };
+        await trackEvent('InitiateCheckout', payload);
+        // Simular compra para demo (en real, solo trackear Purchase tras pago exitoso desde backend)
+        const fakeOrder = { order_id: 'ORDER-' + Date.now(), value: price, currency: 'EUR', contents: [{ id, quantity: 1, price }] };
+        await trackEvent('Purchase', { order: fakeOrder });
+        showToast('Compra simulada: ' + name);
+      });
+    });
+
+    // Toast simple
+    function showToast(msg){
+      const t = document.createElement('div');
+      t.textContent = msg;
+      t.style.position = 'fixed';
+      t.style.bottom = '100px';
+      t.style.right = '20px';
+      t.style.background = '#111';
+      t.style.padding = '10px 14px';
+      t.style.borderRadius = '8px';
+      t.style.zIndex = 99999;
+      document.body.appendChild(t);
+      setTimeout(()=> t.remove(), 2200);
+    }
+
+    // Enviar PageView si ya hubo consentimiento
+    if(localStorage.getItem('sn_consent') === 'accepted'){
+      trackEvent('PageView', { title: document.title });
+    }
+
+    // --- Admin panel simple (demo) ---
+    const openAdminBtn = document.getElementById('openAdmin');
+    const adminPanel = document.getElementById('adminPanel');
+    openAdminBtn.addEventListener('click', () => {
+      const visible = adminPanel.style.display === 'block';
+      adminPanel.style.display = visible ? 'none' : 'block';
+    });
+    document.getElementById('closeAdmin').addEventListener('click', ()=> adminPanel.style.display = 'none');
+    document.getElementById('addProduct').addEventListener('click', ()=>{
+      const name = document.getElementById('adminName').value.trim();
+      const price = parseFloat(document.getElementById('adminPrice').value);
+      if(!name || isNaN(price)) { alert('Nombre y precio válidos'); return; }
+      addProductToUI({ id: Date.now(), name, price });
+      document.getElementById('adminName').value = '';
+      document.getElementById('adminPrice').value = '';
+    });
+
+    function addProductToUI(p){
+      const grid = document.getElementById('productsGrid');
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.dataset.id = p.id;
+      card.dataset.name = p.name;
+      card.dataset.price = p.price;
+      card.innerHTML = '<h3>'+escapeHtml(p.name)+'</h3><div class="small">'+p.price+' €</div><div style="margin-top:10px;display:flex;gap:8px"><button class="btn btn-primary btn-add" data-id="'+p.id+'" data-name="'+escapeHtml(p.name)+'" data-price="'+p.price+'">Añadir al carrito</button><button class="btn btn-ghost btn-buy-now" data-id="'+p.id+'" data-name="'+escapeHtml(p.name)+'" data-price="'+p.price+'">Comprar ahora</button></div>';
+      grid.prepend(card);
+      // Re-bind events for new buttons
+      card.querySelectorAll('.btn-add').forEach(b => b.addEventListener('click', e => {
+        const id = e.currentTarget.dataset.id;
+        const name = e.currentTarget.dataset.name;
+        const price = parseFloat(e.currentTarget.dataset.price);
+        trackEvent('AddToCart', { content_ids: [id], content_name: name, currency: 'EUR', value: price });
+        showToast('Añadido al carrito: ' + name);
+      }));
+      card.querySelectorAll('.btn-buy-now').forEach(b => b.addEventListener('click', async e => {
+        const id = e.currentTarget.dataset.id;
+        const name = e.currentTarget.dataset.name;
+        const price = parseFloat(e.currentTarget.dataset.price);
+        await trackEvent('InitiateCheckout', { content_ids: [id], content_name: name, currency: 'EUR', value: price });
+        const fakeOrder = { order_id: 'ORDER-' + Date.now(), value: price, currency: 'EUR', contents: [{ id, quantity: 1, price }] };
+        await trackEvent('Purchase', { order: fakeOrder });
+        showToast('Compra simulada: ' + name);
+      }));
+      // admin list
+      const adminList = document.getElementById('adminProductList');
+      const row = document.createElement('div');
+      row.style.padding = '6px 0';
+      row.style.borderBottom = '1px dashed rgba(255,255,255,.02)';
+      row.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center"><div>'+escapeHtml(p.name)+' - '+p.price+' €</div><div><button class="btn btn-ghost admin-delete">Eliminar</button></div></div>';
+      adminList.prepend(row);
+      row.querySelector('.admin-delete').addEventListener('click', () => {
+        if(confirm('Eliminar producto?')){ card.remove(); row.remove(); }
+      });
+    }
+
+    // Accessibility: show focus for keyboard users
+    (function(){ function onFirstTab(e){ if(e.key === 'Tab'){ document.body.classList.add('user-is-tabbing'); window.removeEventListener('keydown', onFirstTab); } } window.addEventListener('keydown', onFirstTab); })();
+
+  </script>
 </body>
 </html>
